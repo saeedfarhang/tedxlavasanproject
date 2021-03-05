@@ -1,0 +1,129 @@
+.main-bg {
+  width: 65%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 10px auto;
+  position: absolute;
+  top: 30px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1000px) {
+  .main-bg {
+    width: 100%;
+    height: 90%;
+  }
+}
+
+.dots-1 {
+  position: absolute;
+  top: 217px;
+  right: 15%;
+  width: 70px;
+  height: 70px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 850px) {
+  .dots-1 {
+    opacity: 0.2;
+  }
+}
+
+.content-container {
+  margin-top: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link-to-speakers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 156px 0 0 0;
+}
+
+.dots-2 {
+  position: absolute;
+  bottom: 90%;
+  opacity: 0.1;
+  width: 76px;
+  height: 76px;
+  z-index: -1;
+}
+
+.link-to-speakers-arrow-down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.miss-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.miss-form .btn {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 360px) {
+  .miss-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 180px;
+  }
+  .miss-form .btn {
+    width: 100%;
+    margin-right: 0px;
+    margin-top: 20px;
+  }
+}
+
+.miss_sponser {
+  margin-top: 30px;
+}
+/*# sourceMappingURL=styles.css.map */
