@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import Button from "../../elements/Button";
@@ -11,6 +12,13 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  .bg {
+    z-index: -1;
+    position: absolute;
+    top: 635px;
+    right: 0;
+  }
 `;
 
 const Grid = styled.div`
@@ -19,13 +27,44 @@ const Grid = styled.div`
   width: 100%;
   justify-content: center;
   align-content: center;
+  position: relative;
+  .dots {
+    position: absolute;
+    top: -20px;
+    right: 126px;
+    display: none;
+  }
 `;
 
 export default function SpeackersSection(props) {
   const [openDialog, setOpenDialog] = useState(false);
   const reff = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_st8zvz8",
+        "template_0aqqpxc",
+        e.target,
+        "user_Edp0gVXfp0UjIhx7PVazR"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
     <Container ref={reff}>
+      <div className="bg">
+        <img src="assets/x-lav-bg.svg" alt="" />
+      </div>
+
       <Typography
         margin="0 0 40px 0"
         variant="h3"
@@ -35,95 +74,78 @@ export default function SpeackersSection(props) {
         سخنران‌های تدکس لواسان
       </Typography>
       <Grid>
+        <div className="dots">
+          <img src="assets/dots-1.svg" alt="" />
+        </div>
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/alirezaemtiaz.jpg"
           redxDir="left"
           RedxMarginRight="100px"
-          title=""
+          title="علیرضا امتیاز"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/alirezaemtiaz/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/rayhanjafarizadeh.jfif"
           redxDir="right"
           RedxMarginRight="20px"
-          title=""
+          title="ریحان جعفری زاده"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/rayhan.jafarizadeh/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/thanksgodeverytime.jpg"
           redxDir="left"
           RedxMarginRight="150px"
-          title=""
+          title="شهاب جوانمردی"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/thanksgodeverytime/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/kiomarsmoradi.jpg"
           redxDir="left"
           RedxMarginRight="100px"
-          title=""
+          title="کیومرث مرادی"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/kiomarsmoradi/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/leilyzomorodian.jpg"
           redxDir="right"
           RedxMarginRight="20px"
-          title=""
+          title="لیلی زمردیان"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/leilyzomorodian/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/negaralizadeh.jfif"
           redxDir="left"
           RedxMarginRight="150px"
-          title=""
+          title="نگار علیزاده"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/_negaralizadeh_/"
         />
         <SpeakerCard
-          imageUrl="assets/people.jpg"
+          imageUrl="assets/speakers-img/jalaeipour.jfif"
           redxDir="left"
           RedxMarginRight="100px"
-          title=""
+          title="محمدرضا جلائی پور"
           desc=""
           facebook=""
           twitter=""
-          instagram=""
-        />
-        <SpeakerCard
-          imageUrl="assets/people.jpg"
-          redxDir="right"
-          RedxMarginRight="20px"
-          title=""
-          desc=""
-          facebook=""
-          twitter=""
-          instagram=""
-        />
-        <SpeakerCard
-          imageUrl="assets/people.jpg"
-          redxDir="left"
-          RedxMarginRight="150px"
-          title=""
-          desc=""
-          facebook=""
-          twitter=""
-          instagram=""
+          instagram="https://www.instagram.com/m.jalaeipour/"
         />
       </Grid>
       <div className="miss_speaker miss-form">
@@ -153,25 +175,31 @@ export default function SpeackersSection(props) {
           معرفی سخنران
         </Typography>
         <div style={{ marginTop: "40px" }}>
-          <TextField
-            label="نام سخنران"
-            helperText="نام سخنران مورد نظر را وارد نمایید"
-          />
-          <TextField
-            label="نام سخنران"
-            helperText="نام سخنران مورد نظر را وارد نمایید"
-            style={{ marginTop: "20px" }}
-          />
-          <div
-            style={{
-              marginTop: "40px",
-              width: "100%",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          >
-            <Button variant="fill">ثبت درخواست</Button>
-          </div>
+          <form action="" onSubmit={handleSubmit}>
+            <TextField
+              name="speaker_name"
+              label="نام سخنران"
+              helperText="نام سخنران مورد نظر را وارد نمایید"
+            />
+            <TextField
+              name="speaker_phone"
+              label="شماره تماس"
+              helperText="شماره تلفن سخنران را وارد نمایید"
+              style={{ marginTop: "20px" }}
+            />
+            <div
+              style={{
+                marginTop: "40px",
+                width: "100%",
+                display: "flex",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Button type="submit" variant="fill">
+                ثبت درخواست
+              </Button>
+            </div>
+          </form>
         </div>
       </PopUpDialog>
     </Container>

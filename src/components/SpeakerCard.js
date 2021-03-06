@@ -101,7 +101,7 @@ export default function SpeakerCard(props) {
               fontSize="28px"
               fontWeight="normal"
             >
-              سجاد کمالزاده
+              {props.title}
             </Typography>
             <Typography
               color="#B2B2B2"
@@ -110,16 +110,16 @@ export default function SpeakerCard(props) {
               fontSize="13px"
               fontWeight="300"
             >
-              سجاد کمالزاده
+              {props.desc}
             </Typography>
           </SpeakerDetail>
         </div>
       </div>
       <Actions>
         <SocialLinks>
-          <SocialLink social="instagram" url="" />
-          <SocialLink social="facebook" url="" />
-          <SocialLink social="twitter" url="" />
+          <SocialLink social="instagram" href={props.instagram} />
+          <SocialLink social="facebook" href={props.facebook} />
+          <SocialLink social="twitter" href={props.twitter} />
         </SocialLinks>
         <ArrowBtn />
       </Actions>

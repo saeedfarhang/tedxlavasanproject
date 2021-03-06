@@ -13,9 +13,19 @@ const CustomButton = styled.div`
   padding: 10px 20px ${(props) => (props.variant === "fill" ? "10px" : "0px")}
     20px;
   border: ${(props) =>
-    props.variant === "fill" ? "1px solid #e62b1e" : "none"};
+    props.disable
+      ? "1px solid #46464630"
+      : props.variant === "fill"
+      ? "1px solid #e62b1e"
+      : "none"};
   color: ${(props) =>
-    props.active ? (props.variant === "clear" ? "#e62b1e" : "#fff") : "#fff"};
+    props.disable
+      ? "#464646"
+      : props.active
+      ? props.variant === "clear"
+        ? "#e62b1e"
+        : "#fff"
+      : "#fff"};
 `;
 
 const OutLineHolder = styled.div`
@@ -38,10 +48,16 @@ const FillBack = styled.div`
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #e62b1e;
+  background-color: ${(props) => (props.disable ? "transparent" : "#e62b1e")};
   transform: translateX(-100%);
-  ${(props) => (props.hover ? "transform: translateX(0);" : "")}
-  ${(props) => (props.active ? "background-color: #e62b1e60;" : "")}
+  ${(props) =>
+    props.disable
+      ? ``
+      : `
+    ${props.hover ? "transform: translateX(0);" : ""}
+    ${props.active ? "background-color: #e62b1e60;" : ""}
+  `}/* ${(props) => (props.hover ? "transform: translateX(0);" : "")}
+  ${(props) => (props.active ? "background-color: #e62b1e60;" : "")} */
 `;
 
 export default function Button(props) {
@@ -66,7 +82,7 @@ export default function Button(props) {
           <Typography variant="h6" fontWeight="300" fontSize="14px">
             {props.children}
           </Typography>
-          <FillBack hover={hover} active={active} />
+          <FillBack disable={props.disable} hover={hover} active={active} />
         </>
       ) : (
         <div style={{ overflow: "hidden" }}>

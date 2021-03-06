@@ -84,7 +84,6 @@ export default function NavBar(props) {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
-  console.log(scrollTop);
   return (
     <NavBarContainer scrollTop={scrollTop}>
       <HambMenu onClick={() => setMenuOpen((state) => !state)}>
@@ -123,7 +122,9 @@ export default function NavBar(props) {
           <Button variant="clear">تد چیست؟</Button>
         </HashLink>
       </NavLinks>
-      <NavLogo src="assets/tedx-logo.svg" />
+      <HashLink smooth to="#">
+        <NavLogo src="assets/tedx-logo.svg" />
+      </HashLink>
     </NavBarContainer>
   );
 }

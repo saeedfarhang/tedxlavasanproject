@@ -58,7 +58,6 @@ export default function TextField(props) {
     } else {
       setTyping(false);
     }
-    console.log(typing);
   };
 
   return (

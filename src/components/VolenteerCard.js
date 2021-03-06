@@ -23,6 +23,7 @@ const Container = styled.div`
     right: 0;
     bottom: 0;
     opacity: 0.7;
+    mix-blend-mode: color;
   }
   .image-over {
     width: 100%;
@@ -77,7 +78,7 @@ export default function VolenteerCard(props) {
           </Typography>
           <Typography
             margin="2px 0"
-            variant="hp"
+            variant="p"
             fontSize="11px"
             fontWeight="300"
           >
@@ -85,9 +86,9 @@ export default function VolenteerCard(props) {
           </Typography>
         </div>
         <div className="social-links">
-          <SocialLink social="facebook" />
-          <SocialLink social="twitter" />
-          <SocialLink social="instagram" />
+          <SocialLink social="facebook" href={props.facebook} />
+          <SocialLink social="twitter" href={props.twitter} />
+          <SocialLink social="instagram" href={props.instagram} />
         </div>
       </div>
     </Container>

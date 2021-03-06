@@ -92,12 +92,9 @@ export default function SponsersSection(props) {
 
   const logosRef = useRef(null);
   useEffect(() => {
-    console.log(logosRef.current);
     logosRef.current.scrollTo(100, 10);
   });
   const click = () => {
-    console.log(logosRef.current);
-
     logosRef.current.scrollTo(-100, 0);
   };
 
@@ -126,12 +123,6 @@ export default function SponsersSection(props) {
             className="slider"
             // dots
             autoplay
-            // overScan={2}
-            // autoplaySpeed={10}
-            // autoplayScroll={1}
-            // // duration={50000}
-            // accessibility={false}
-            // onReszie={(e) => console.log(e)}
           >
             <div className="s-logo">
               <img

@@ -26,7 +26,7 @@ export default function TopSection(props) {
       <img className="dots-1" src="assets/dots-1.svg" alt="dots-1" />
       <div className="content-container">
         <Typography variant="h1" fontWeight="normal" fontSize="30px">
-          تدکس لواسان - ۲۰ اردیبهشت ۱۴۰۰
+          تدکس لواسان - ٣۱ اردیبهشت ۱۴۰۰
         </Typography>
 
         <Typography
@@ -36,9 +36,11 @@ export default function TopSection(props) {
           fontWeight="300"
           fontSize="20px"
         >
-          فروش بلیط از ۲۰ فروردین آغاز خواهد شد
+          فروش بلیط از ابتدای ادریبهشت آغاز خواهد شد
         </Typography>
-        <Button variant="fill">خرید بلیط</Button>
+        <Button disable variant="fill">
+          خرید بلیط
+        </Button>
         <div className="link-to-speakers-container" onClick={scrollHandle}>
           <Typography
             color="#B2B2B2"

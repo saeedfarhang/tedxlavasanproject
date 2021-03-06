@@ -52,29 +52,34 @@ export default function VolenteersSection(props) {
       </Typography>
       <Grid>
         <VolenteerCard
-          imageUrl="assets/people.jpg"
-          title="سجاد کمال زاده"
-          desc="مدیریت بازاریابی تجارت الکترونیک"
+          imageUrl="assets/volenteer-img/aliahmadi.jfif"
+          title="علی احمدی"
+          desc=""
+          instagram="https://www.instagram.com/aliahmadi.__/"
         />
         <VolenteerCard
-          imageUrl="assets/people.jpg"
-          title="سجاد کمال زاده"
-          desc="مدیریت بازاریابی تجارت الکترونیک"
+          imageUrl="assets/volenteer-img/forooooozan.jpeg"
+          title="جواد فروزان"
+          desc=""
+          instagram="https://www.instagram.com/forooooozan/"
         />
         <VolenteerCard
-          imageUrl="assets/people.jpg"
-          title="سجاد کمال زاده"
-          desc="مدیریت بازاریابی تجارت الکترونیک"
+          imageUrl="assets/volenteer-img/mansourehzeinaly.jfif"
+          title="منصوره زینلی"
+          desc=""
+          instagram="https://www.instagram.com/mansoureh.zeinaly/"
         />
         <VolenteerCard
-          imageUrl="assets/people.jpg"
-          title="سجاد کمال زاده"
-          desc="مدیریت بازاریابی تجارت الکترونیک"
+          imageUrl="assets/volenteer-img/zeynabshahedi.PNG"
+          title="زینب شاهدی"
+          desc=""
+          instagram="https://www.instagram.com/zeynab.shahedi/"
         />
         <VolenteerCard
-          imageUrl="assets/people.jpg"
-          title="سجاد کمال زاده"
-          desc="مدیریت بازاریابی تجارت الکترونیک"
+          imageUrl="assets/volenteer-img/sarah_helmzadeh.jfif"
+          title="سارا حلم زاده"
+          desc=""
+          instagram="https://www.instagram.com/sarah_helmzadeh/"
         />
       </Grid>
       <div className="miss_volenteer miss-form">

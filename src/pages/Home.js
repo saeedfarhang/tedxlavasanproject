@@ -14,7 +14,7 @@ import "./styles.css";
 const HomeContainer = styled.div``;
 
 export default function Home() {
-  const speakerRef = forwardRef();
+  const speakerRef = useRef();
 
   return (
     <HomeContainer>
