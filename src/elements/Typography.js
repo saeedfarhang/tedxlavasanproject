@@ -1,12 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-const fontSizes = {
-  sm: {},
-  md: {},
-  lg: {},
-};
-
 const CustomTypography = styled.span`
   margin: 0;
   padding: ${(props) => (props.padding ? props.padding : "0")};

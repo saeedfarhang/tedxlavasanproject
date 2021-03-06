@@ -48,7 +48,6 @@ const Input = styled.div`
 `;
 
 export default function TextField(props) {
-  const [focus, setFocus] = useState(false);
   const [hover, setHover] = useState(false);
   const [typing, setTyping] = useState(false);
 

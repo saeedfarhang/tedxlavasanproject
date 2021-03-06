@@ -31,15 +31,6 @@ export default function VolenteersSection(props) {
     console.log(e.target.speaker_name.value);
   };
 
-  const options = [
-    { name: "Swedish", value: "sv" },
-    { name: "English", value: "en" },
-    {
-      type: "group",
-      name: "Group name",
-      items: [{ name: "Spanish", value: "es" }],
-    },
-  ];
   return (
     <Container {...props}>
       <Typography

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import Button from "../elements/Button";
 

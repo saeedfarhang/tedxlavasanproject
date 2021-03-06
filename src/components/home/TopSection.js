@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Button from "../../elements/Button";
 import Typography from "../../elements/Typography";

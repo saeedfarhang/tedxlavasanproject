@@ -1,5 +1,4 @@
-import React, { forwardRef, useEffect, useRef } from "react";
-import { HashLink, NavHashLink } from "react-router-hash-link";
+import React, { useRef } from "react";
 import styled from "styled-components";
 import AboutLavasanSection from "../components/home/AboutLavasanSection";
 import AboutSection from "../components/home/AboutSection";

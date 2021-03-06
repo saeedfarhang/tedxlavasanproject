@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ArrowBtn from "../elements/ArrowBtn";
-import Button from "../elements/Button";
 import SocialLink from "../elements/SocialLink";
 import Typography from "../elements/Typography";
 
