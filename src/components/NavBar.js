@@ -16,8 +16,9 @@ const NavBarContainer = styled.div`
       ? "linear-gradient(180deg, #000000, #00000000)"
       : "#000"};
   height: ${(props) => (props.scrollTop > 50 ? "100px" : "130px")};
-  @media screen and (min-width: 450px) {
+  @media screen and (max-width: 600px) {
     height: ${(props) => (props.scrollTop > 50 ? "100px" : "150px")};
+    ${(props) => (props.open ? "background-color:#000000;" : "")}
   }
   @media screen and (min-width: 740px) {
     height: ${(props) => (props.scrollTop > 50 ? "100px" : "170px")};
@@ -39,11 +40,44 @@ const NavLogo = styled.img`
 
 const HambMenu = styled.div`
   position: relative;
-  width: 35px;
-  height: 35px;
-  border: solid 1px #e62b1e;
+  width: 40px;
+  height: 40px;
   @media screen and (min-width: 850px) {
     display: none;
+  }
+  @media screen and (max-width: 600px) {
+    position: static;
+  }
+  .icon-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .menu_line-1 {
+      height: 1px;
+      width: 24px;
+      background-color: #e62b1e;
+      margin: 3px 0;
+      ${(props) =>
+        props.open ? "transform:translateY(3px) rotate(45deg);" : ""}
+    }
+    .menu_line-2 {
+      height: 1px;
+      width: 24px;
+      background-color: #e62b1e;
+      margin: 3px 0;
+      display: ${(props) => (props.open ? "none" : "block")};
+    }
+    .menu_line-3 {
+      height: 1px;
+      width: 24px;
+      background-color: #e62b1e;
+      margin: 3px 0;
+      ${(props) =>
+        props.open ? "transform:translateY(-3px) rotate(-45deg) ;" : ""}
+    }
   }
 `;
 
@@ -51,8 +85,6 @@ const NavMenu = styled.div`
   transition: all 0.2s ease-in-out;
   visibility: ${(props) => (props.open ? "visible" : "hidden")};
   opacity: ${(props) => (props.open ? "1" : "0")};
-  /* height: ${(props) => (props.open ? "250px" : "0")}; */
-  /* overflow: hidden; */
   z-index: 100;
   position: absolute;
   display: flex;
@@ -67,6 +99,25 @@ const NavMenu = styled.div`
   border-radius: 25px;
   @media screen and (min-width: 850px) {
     display: none;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 100vw;
+    height: ${(props) =>
+      props.scrollTop > 50 ? "calc(100vh - 70px)" : "calc(100vh - 100px)"};
+    position: absolute;
+    top: ${(props) => (props.scrollTop > 50 ? "70px" : "100px")};
+    right: 0;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    button {
+      padding: 25px 35vw;
+    }
   }
 `;
 
@@ -85,12 +136,15 @@ export default function NavBar(props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
   return (
-    <NavBarContainer scrollTop={scrollTop}>
-      <HambMenu onClick={() => setMenuOpen((state) => !state)}>
-        <NavMenu open={menuOpen}>
-          <HashLink smooth to="/#">
-            <Button variant="fill">خرید بلیط</Button>
-          </HashLink>
+    <NavBarContainer open={menuOpen} scrollTop={scrollTop}>
+      <HambMenu open={menuOpen} onClick={() => setMenuOpen((state) => !state)}>
+        <div className="icon-div">
+          <div className="menu_line-1"></div>
+          <div className="menu_line-2"></div>
+          <div className="menu_line-3"></div>
+        </div>
+        <NavMenu open={menuOpen} scrollTop={scrollTop}>
+          <div style={{ height: 30 }}></div>
           <HashLink smooth to="/#speakers">
             <Button variant="clear">سخنران ها</Button>
           </HashLink>
@@ -103,11 +157,18 @@ export default function NavBar(props) {
           <HashLink smooth to="/#tedandtedx">
             <Button variant="clear">تد چیست؟</Button>
           </HashLink>
+          <HashLink style={{ margin: "auto 0 0 0" }} smooth to="/#">
+            <Button margin="20px" variant="fill">
+              خرید بلیط
+            </Button>
+          </HashLink>
         </NavMenu>
       </HambMenu>
       <NavLinks>
         <HashLink smooth to="/#">
-          <Button variant="fill">خرید بلیط</Button>
+          <Button margin="0 0 0 10px" variant="fill">
+            خرید بلیط
+          </Button>
         </HashLink>
         <HashLink smooth to="/#speakers">
           <Button variant="clear">سخنران ها</Button>

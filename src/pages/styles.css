@@ -1,7 +1,7 @@
 .main-bg {
   width: 65%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   margin: 10px auto;
   position: absolute;
   top: 30px;
@@ -37,14 +37,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .link-to-speakers-container {
@@ -52,15 +52,15 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   margin: 156px 0 0 0;
 }
@@ -80,15 +80,19 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-bottom: 30px;
+}
+
+.link-to-speakers-arrow-down .chaos-h-link {
+  margin-top: 20px;
 }
 
 .miss-form {
@@ -97,27 +101,28 @@
   display: flex;
   margin-top: 80px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .miss-form .btn {
   margin-right: 30px;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 485px) {
   .miss-form {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    width: 180px;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px 0 0px 0;
   }
   .miss-form .btn {
-    width: 100%;
+    /* width: 100%; */
     margin-right: 0px;
     margin-top: 20px;
   }

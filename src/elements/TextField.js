@@ -76,8 +76,10 @@ export default function TextField(props) {
           onMouseEnter={() => setHover(true)}
           onMouseLeave={() => setHover(false)}
           onChange={handleChange}
-          type="text"
+          type={props.type ? props.type : "text"}
           name={props.name}
+
+          // {...props}
         />
         <Typography
           className="placeholder"

@@ -10,8 +10,11 @@ const CustomButton = styled.div`
   cursor: pointer;
   width: fit-content;
   height: fit-content;
-  padding: 10px 20px ${(props) => (props.variant === "fill" ? "10px" : "0px")}
-    20px;
+  margin: ${(props) => (props.margin ? props.margin : "0")};
+  padding: 10px 30px
+    ${(props) =>
+      props.padding ? props.padding : props.variant === "fill" ? "10px" : "0px"}
+    30px;
   border: ${(props) =>
     props.disable
       ? "1px solid #46464630"
@@ -34,7 +37,7 @@ const OutLineHolder = styled.div`
   height: 1px;
   margin-top: 10px;
   background-color: #e62b1e;
-  transform: translateX(100%);
+  transform: translateX(101%);
   ${(props) => (props.hover ? "transform: translateX(0);" : "")}
   ${(props) => (props.active ? "height: 2px;" : "")}
 `;
@@ -73,20 +76,31 @@ export default function Button(props) {
       variant={props.variant}
       active={active}
       override={props.override}
+      margin={props.margin}
       {...props}
     >
       {props.override ? (
         props.children
       ) : props.variant === "fill" ? (
         <>
-          <Typography variant="h6" fontWeight="300" fontSize="14px">
+          <Typography
+            variant="h6"
+            fontWeight="300"
+            fontSize={props.fontSize ? props.fontSize : "14px"}
+            reduce="0px"
+          >
             {props.children}
           </Typography>
           <FillBack disable={props.disable} hover={hover} active={active} />
         </>
       ) : (
         <div style={{ overflow: "hidden" }}>
-          <Typography variant="h6" fontWeight="normal" fontSize="14px">
+          <Typography
+            variant="h6"
+            fontWeight="normal"
+            fontSize={props.fontSize ? props.fontSize : "14px"}
+            reduce="0px"
+          >
             {props.children}
           </Typography>
           <OutLineHolder hover={hover} active={active} />

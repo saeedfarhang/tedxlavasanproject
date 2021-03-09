@@ -37,6 +37,16 @@ const Container = styled.div`
     width: 100%;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 485px) {
+      flex-direction: column;
+      align-items: center;
+      button {
+        width: 95%;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+        margin-bottom: 20px;
+      }
+    }
   }
 `;
 
@@ -61,12 +71,13 @@ export default function FooterSection(props) {
             fontWeight="lighter"
             margin="0 0 40px 0"
           >
-            لواسان، دانشگاه بزرگ لواسان
+            لواسان، بلوار امام خمینی، خیابان اتحاد، خیابان گل‌های پنجم، پلاک ۵،
+            دفتر کارمان
           </Typography>
           <div className="social-links">
-            <SocialLink hoverBlack social="facebook" />
-            <SocialLink hoverBlack social="twitter" />
-            <SocialLink hoverBlack social="instagram" />
+            <SocialLink hoverBlack social="facebook" href="#" />
+            <SocialLink hoverBlack social="twitter" href="#" />
+            <SocialLink hoverBlack social="instagram" href="#" />
           </div>
         </div>
         <div className="btns">

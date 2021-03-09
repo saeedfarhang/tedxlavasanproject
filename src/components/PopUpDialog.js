@@ -12,9 +12,11 @@ const Container = styled.div`
   align-items: flex-end;
   bottom: 0;
   right: 0;
-  z-index: 100;
+  z-index: 10000;
+
   .pop-up-container {
-    transition: all 0.1s ease;
+    transition: all 0.3s ease 0.3s;
+    border: 1px solid #4646464d;
 
     z-index: 100;
     position: relative;
@@ -22,8 +24,14 @@ const Container = styled.div`
     max-width: 460px;
     height: ${(props) => (props.open ? props.height : "0")};
     background-color: #000000;
-    @media screen and (max-height: 600px) {
+    opacity: 0.98;
+    /* @media screen and (max-height: 600px) {
       max-height: 450px;
+      overflow-y: scroll;
+    } */
+    @media screen and (max-width: 485px) {
+      height: 100%;
+      width: 100vw;
       overflow-y: scroll;
     }
     .close-btn {
@@ -44,7 +52,7 @@ const Container = styled.div`
       }
     }
     .X-logo {
-      position: absolute;
+      position: fixed;
       margin: 0 auto;
       bottom: -15%;
       left: 0;

@@ -2,15 +2,17 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
+  display: ${(props) => (props.href ? "block" : "none")};
   transition: all 0.1s ease-in-out;
   z-index: 1;
-
-  :first-child {
-    margin-left: 24px;
-  }
-  :last-child {
-    margin-right: 24px;
-  }
+  margin: 0 12px;
+  /* 
+    :first-child {
+      margin-left: 24px;
+    }
+    :last-child {
+      margin-right: 24px;
+    } */
 `;
 
 const Icon = styled.svg`
@@ -26,7 +28,7 @@ const Icon = styled.svg`
 
 export default function SocialLink(props) {
   return (
-    <Container>
+    <Container href={props.href}>
       <a href={props.href} target="_blank">
         <Icon
           hoverBlack={props.hoverBlack}

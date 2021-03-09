@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
-import Slider from "infinite-react-carousel";
 import Button from "../../elements/Button";
 import TextField from "../../elements/TextField";
 import PopUpDialog from "../PopUpDialog";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Container = styled.div`
   margin-top: 120px;
@@ -60,29 +62,32 @@ const Container = styled.div`
       }
     }
     .sponsers {
-      display: flex;
-      height: 150px;
-      justify-content: center;
-      align-items: center;
-      img.sponser-logo {
-        /* width: 150px; */
-        /* margin-left: 70px; */
+      width: 90%;
+      margin: 0 auto;
+      .slick-list {
+        direction: ltr;
+        ::after {
+          direction: ltr;
+        }
+        ::before {
+          direction: ltr;
+        }
       }
-      .s-logo {
-        /* width: 150px;
-        height: 150px; */
-        /* margin: 70px; */
-      }
-      .carousel-track {
-        /* width: 30%; */
-      }
-    }
-  }
-  .slider {
-    width: 100%;
 
-    img {
-      width: 150px;
+      .s-logo {
+        width: 150px;
+        height: 150px;
+        /* margin: 70px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        img {
+          width: 90%;
+          filter: brightness(0) invert(1);
+          opacity: 0.3;
+        }
+      }
     }
   }
 `;
@@ -109,76 +114,33 @@ export default function SponsersSection(props) {
       >
         حامیان تدکس لواسان
       </Typography>
+
       <div className="sponsers-container">
         <div className="over">
           <div className="left"></div>
           <div className="right"></div>
         </div>
         <div className="sponsers" ref={logosRef}>
-          <Slider
-            slidesPerRow={5}
-            arrows={false}
-            centerMode
-            // pauseOnHover
-            className="slider"
-            // dots
-            autoplay
-          >
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
+          <Slider adaptiveHeight arrows={false} infinite slidesToShow={2}>
+            <div>
+              <div className="s-logo">
+                <img src="assets/sponser-logo/amirkabir.png" alt="" />
+              </div>
             </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
+            <div>
+              <div className="s-logo">
+                <img src="assets/sponser-logo/kaarmaan.png" alt="" />
+              </div>
             </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
+            <div>
+              <div className="s-logo">
+                <img src="assets/sponser-logo/amirkabir.png" alt="" />
+              </div>
             </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
-            </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
-            </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
-            </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
-            </div>
-            <div className="s-logo">
-              <img
-                className="sponser-logo"
-                src="assets/sponser-logo/snapp_logo.png"
-                alt=""
-              />
+            <div>
+              <div className="s-logo">
+                <img src="assets/sponser-logo/kaarmaan.png" alt="" />
+              </div>
             </div>
           </Slider>
         </div>
@@ -202,12 +164,13 @@ export default function SponsersSection(props) {
         </Typography>
         <div style={{ marginTop: "40px" }}>
           <TextField
-            label="نام سخنران"
-            helperText="نام سخنران مورد نظر را وارد نمایید"
+            label="نام و نام خانوادگی"
+            helperText="نام و نام خانوادگی خود را وارد نمایید"
           />
           <TextField
-            label="نام سخنران"
-            helperText="نام سخنران مورد نظر را وارد نمایید"
+            label="شماره تماس"
+            type="number"
+            helperText="شماره تماس خود را وارد نمایید"
             style={{ marginTop: "20px" }}
           />
           <div

@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
 
@@ -16,6 +17,8 @@ const Container = styled.div`
     min-width: 400px;
   }
   .content {
+    background: transparent url("assets/bg-lav-map.png") 0% 0% no-repeat
+      padding-box;
     padding: 70px 30px;
     display: flex;
     flex-direction: column;
@@ -27,13 +30,20 @@ const Container = styled.div`
       flex-direction: row;
       justify-content: space-around;
     }
+    @media screen and (max-width: 485px) {
+      padding: 30px 30px 0 30px;
+    }
     div.text {
       line-height: 35px;
       max-width: 540px;
       display: flex;
       flex-direction: column;
+      @media screen and (max-width: 485px) {
+        line-height: 40px;
+      }
     }
     div.image-container {
+      margin-right: 200px;
       width: 100%;
       display: flex;
       flex-direction: column;
@@ -41,6 +51,12 @@ const Container = styled.div`
       margin-top: 30px;
       position: relative;
       max-width: 350px;
+      @media screen and (max-width: 930px) {
+        margin-right: 0px;
+      }
+      @media screen and (max-width: 485px) {
+        margin-right: 0;
+      }
       div.image {
         width: 100%;
         display: flex;
@@ -68,6 +84,9 @@ const Container = styled.div`
           position: absolute;
           top: 20px;
           left: -20px;
+          @media screen and (max-width: 485px) {
+            display: none;
+          }
         }
       }
       .image-owner {
@@ -80,9 +99,14 @@ const Container = styled.div`
 `;
 
 export default function AboutLavasanSection(props) {
+  const isMobile = useMediaQuery({ maxWidth: 485 });
   return (
     <Container>
-      <img src="assets/bg-teh-to-lav.png" alt="" className="bg-teh-lav" />
+      {isMobile ? (
+        <img src="assets/bg-teh-to-lav-mob.png" alt="" className="bg-teh-lav" />
+      ) : (
+        <img src="assets/bg-teh-to-lav.png" alt="" className="bg-teh-lav" />
+      )}
       <div className="content">
         <div className="text">
           <Typography
@@ -99,7 +123,7 @@ export default function AboutLavasanSection(props) {
             variant="p"
             fontSize="16px"
             fontWeight="300"
-            textAlign="justify"
+            textAlign="right"
             color="#b2b2b2"
           >
             لَواسان یکی از شهرهای شهرستان شمیرانات در استان تهران و مرکز بخش
@@ -140,14 +164,25 @@ export default function AboutLavasanSection(props) {
         </div>
       </div>
       <div>
-        <img
-          className="chaos"
-          style={{
-            margin: "80px 0 60px 0",
-          }}
-          src="assets/chaos-h.svg"
-          alt=""
-        />
+        {isMobile ? (
+          <img
+            className="chaos"
+            style={{
+              margin: "30px 0",
+            }}
+            src="assets/chaos-h.svg"
+            alt=""
+          />
+        ) : (
+          <img
+            className="chaos"
+            style={{
+              margin: "80px 0 60px 0",
+            }}
+            src="assets/chaos-h.svg"
+            alt=""
+          />
+        )}
       </div>
     </Container>
   );

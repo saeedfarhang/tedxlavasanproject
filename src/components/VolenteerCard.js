@@ -9,6 +9,9 @@ const Container = styled.div`
   height: 309px;
   margin: 10px;
   position: relative;
+  @media screen and (max-width: 485px) {
+    width: 270px;
+  }
   .card-image {
     width: 100%;
     height: 100%;
@@ -61,11 +64,7 @@ export default function VolenteerCard(props) {
       imageUrl={props.imageUrl}
     >
       <img className="card-image" src={props.imageUrl} alt="" />
-      <img
-        src="assets/redx-color-60.svg"
-        alt="redx-color-60"
-        className="red-x"
-      />
+      <img src="assets/left-redx.svg" alt="redx-color-60" className="red-x" />
       <div className="image-over">
         <div className="content">
           <Typography

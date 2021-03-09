@@ -69,8 +69,8 @@ export default function SpeakerCard(props) {
             alt=""
             style={{
               opacity: 0.8,
-              mixBlendMode: "color",
               marginRight: props.RedxMarginRight,
+              mixBlendMode: "color",
             }}
           />
         ) : (
@@ -79,8 +79,8 @@ export default function SpeakerCard(props) {
             alt=""
             style={{
               opacity: 0.8,
-              mixBlendMode: "color",
               marginRight: props.RedxMarginRight,
+              mixBlendMode: "color",
             }}
           />
         )}
@@ -95,6 +95,7 @@ export default function SpeakerCard(props) {
         >
           <SpeakerDetail>
             <Typography
+              reduce="0px"
               textAlign="left"
               variant="h3"
               fontSize="28px"
@@ -103,6 +104,7 @@ export default function SpeakerCard(props) {
               {props.title}
             </Typography>
             <Typography
+              reduce="0px"
               color="#B2B2B2"
               textAlign="left"
               variant="p"

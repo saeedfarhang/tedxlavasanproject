@@ -19,6 +19,21 @@ const Container = styled.div`
     top: 635px;
     right: 0;
   }
+  .title {
+    margin: 0 0 40px 0;
+
+    @media screen and (max-width: 485px) {
+      margin: 0 0 20px 0;
+    }
+  }
+  .chaos {
+    margin: 80px 0 60px 0;
+    @media screen and (max-width: 485px) {
+      opacity: 0;
+      height: 70px;
+      margin: 0;
+    }
+  }
 `;
 
 const Grid = styled.div`
@@ -33,6 +48,13 @@ const Grid = styled.div`
     top: -20px;
     right: 126px;
     display: none;
+  }
+  .x-teh-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 326px;
+    z-index: -1;
   }
 `;
 
@@ -66,21 +88,24 @@ export default function SpeackersSection(props) {
       </div>
 
       <Typography
-        margin="0 0 40px 0"
         variant="h3"
         fontSize="20px"
         fontWeight="normal"
+        className="title"
       >
         سخنران‌های تدکس لواسان
       </Typography>
       <Grid>
+        <div className="x-teh-bg">
+          <img src="assets/x-teh-bg.svg" alt="x-teh-bg" />
+        </div>
         <div className="dots">
           <img src="assets/dots-1.svg" alt="" />
         </div>
         <SpeakerCard
           imageUrl="assets/speakers-img/alirezaemtiaz.jpg"
           redxDir="left"
-          RedxMarginRight="100px"
+          RedxMarginRight="20px"
           title="علیرضا امتیاز"
           desc=""
           facebook=""
@@ -100,7 +125,7 @@ export default function SpeackersSection(props) {
         <SpeakerCard
           imageUrl="assets/speakers-img/thanksgodeverytime.jpg"
           redxDir="left"
-          RedxMarginRight="150px"
+          RedxMarginRight="110px"
           title="شهاب جوانمردی"
           desc=""
           facebook=""
@@ -110,7 +135,7 @@ export default function SpeackersSection(props) {
         <SpeakerCard
           imageUrl="assets/speakers-img/kiomarsmoradi.jpg"
           redxDir="left"
-          RedxMarginRight="100px"
+          RedxMarginRight="80px"
           title="کیومرث مرادی"
           desc=""
           facebook=""
@@ -120,7 +145,7 @@ export default function SpeackersSection(props) {
         <SpeakerCard
           imageUrl="assets/speakers-img/leilyzomorodian.jpg"
           redxDir="right"
-          RedxMarginRight="20px"
+          RedxMarginRight="30px"
           title="لیلی زمردیان"
           desc=""
           facebook=""
@@ -130,7 +155,7 @@ export default function SpeackersSection(props) {
         <SpeakerCard
           imageUrl="assets/speakers-img/negaralizadeh.jfif"
           redxDir="left"
-          RedxMarginRight="150px"
+          RedxMarginRight="120px"
           title="نگار علیزاده"
           desc=""
           facebook=""
@@ -140,7 +165,7 @@ export default function SpeackersSection(props) {
         <SpeakerCard
           imageUrl="assets/speakers-img/jalaeipour.jfif"
           redxDir="left"
-          RedxMarginRight="100px"
+          RedxMarginRight="40px"
           title="محمدرضا جلائی پور"
           desc=""
           facebook=""
@@ -161,14 +186,7 @@ export default function SpeackersSection(props) {
         </Button>
       </div>
       <div>
-        <img
-          className="chaos"
-          style={{
-            margin: "80px 0 60px 0",
-          }}
-          src="assets/chaos-h.svg"
-          alt=""
-        />
+        <img className="chaos" src="assets/chaos-h.svg" alt="" />
       </div>
       <PopUpDialog open={openDialog} setOpen={setOpenDialog}>
         <Typography variant="h5" fontSize="20px" fontWeight="normal">
@@ -184,6 +202,7 @@ export default function SpeackersSection(props) {
             <TextField
               name="speaker_phone"
               label="شماره تماس"
+              type="number"
               helperText="شماره تلفن سخنران را وارد نمایید"
               style={{ marginTop: "20px" }}
             />

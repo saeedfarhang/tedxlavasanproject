@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
 
@@ -17,51 +18,92 @@ const Container = styled.div`
   .content {
     margin-top: -10vw;
     width: 100%;
+    @media screen and (max-width: 485px) {
+      margin-top: -45vh;
+    }
     .title {
       display: flex;
       /* justify-content: center; */
       align-items: center;
       width: 100%;
       flex-wrap: wrap;
+      @media screen and (max-width: 485px) {
+        margin-right: 20px;
+      }
       .chaos-v {
-        width: 30%;
-        max-width: 150px;
-        height: 100%;
+        width: 300px;
+        height: 6px;
         margin-left: 30px;
+        margin-right: -150px;
+        @media screen and (max-width: 485px) {
+          display: none;
+        }
       }
     }
     .about-tl-text {
       margin: 20px 14vw;
       line-height: 40px;
-      text-align: justify;
-      @media screen and (max-width: 900px) {
-        height: 300px;
-        overflow-y: scroll;
+      text-align: right;
+      @media screen and (max-width: 485px) {
+        margin: 20px;
       }
     }
   }
   .content-2 {
     margin-top: 100px;
+    .about-tl-text {
+      margin: 20px 14vw;
+      line-height: 40px;
+      text-align: left;
+      @media screen and (max-width: 485px) {
+        text-align: right;
+        margin: 20px;
+      }
+    }
     .title {
       flex-direction: row-reverse;
       justify-content: flex-start;
-      .chaos-v {
-        margin-left: 0;
+      @media screen and (max-width: 485px) {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+      }
+      .chaos-v-2 {
+        width: 300px;
+        height: 6px;
+        margin-left: -150px;
         margin-right: 30px;
+        @media screen and (max-width: 485px) {
+          display: none;
+        }
       }
     }
   }
 `;
 
 export default function AboutTEDSection(props) {
+  const isMobile = useMediaQuery({ maxWidth: 485 });
+
   return (
     <Container>
-      <img className="head-img" src="assets/bg-teh-lav.png" alt="" />
+      {isMobile ? (
+        <img src="assets/bg-about-ted-mob.png" alt="" className="head-img" />
+      ) : (
+        <img src="assets/bg-about-ted.png" alt="" className="head-img" />
+      )}
+
       <div className="content">
         <div className="title">
           <img className="chaos-v" src="assets/chaos-v.svg" alt="" />
+          <Typography
+            variant="h4"
+            fontSize="24px"
+            fontWeight="500"
+            color="#e62b1e"
+          >
+            تد &nbsp;
+          </Typography>
           <Typography variant="h4" fontSize="24px" fontWeight="500">
-            تد چیست؟
+            چیست؟
           </Typography>
         </div>
         <Typography
@@ -69,6 +111,7 @@ export default function AboutTEDSection(props) {
           fontSize="16px"
           fontWeight="300"
           className="about-tl-text"
+          color="#b2b2b2"
         >
           TED مخفف (سرواژه) سه کلمه Technology ،Entertainment ،Design است.
           (تکنولوژی و سرگرمی و طراحی) مجموعه‌ TED یک سازمان غیر انتفاعی است که
@@ -96,9 +139,17 @@ export default function AboutTEDSection(props) {
       </div>
       <div className="content content-2">
         <div className="title">
-          <img className="chaos-v" src="assets/chaos-v-2.svg" alt="" />
+          <img className="chaos-v-2" src="assets/chaos-v-2.svg" alt="" />
           <Typography variant="h4" fontSize="24px" fontWeight="500">
-            تدکس چیست؟
+            چیست؟
+          </Typography>
+          <Typography
+            variant="h4"
+            fontSize="24px"
+            fontWeight="500"
+            color="#e62b1e"
+          >
+            تدکس&nbsp;
           </Typography>
         </div>
         <Typography
@@ -106,6 +157,7 @@ export default function AboutTEDSection(props) {
           fontSize="16px"
           fontWeight="300"
           className="about-tl-text"
+          color="#b2b2b2"
         >
           تدکس مجموعه ایی از چندین سخنرانی افراد متفکر و متخصص در حوزه های
           گوناگون است که ایده ها، تجربیات و دانش خود را با زبانی ساده و جذاب و

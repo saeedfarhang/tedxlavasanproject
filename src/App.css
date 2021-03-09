@@ -7,10 +7,12 @@
   box-sizing: border-box;
   font-family: IRANSans, Helvetica, sans-serif;
 }
+
 body {
   min-height: 150vh;
   background-color: #000000;
   color: #fff;
+  overflow-x: hidden !important;
 }
 a,
 a:link,
@@ -31,4 +33,15 @@ button:active {
   font-weight: inherit;
   background-color: inherit;
   outline: inherit;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

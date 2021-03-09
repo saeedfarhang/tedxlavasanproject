@@ -3,15 +3,6 @@ import Select from "react-select";
 import styled from "styled-components";
 import Typography from "./Typography";
 
-const aquaticCreatures = [
-  { label: "دیزانر", value: "دیزانر" },
-  { label: "نقاش", value: "نقاش" },
-  { label: "بقال", value: "بقال" },
-  { label: "Octopus", value: "Octopus" },
-  { label: "Crab", value: "Crab" },
-  { label: "Lobster", value: "Lobster" },
-];
-
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -65,7 +56,7 @@ const CustomSelect = styled(Select)`
     background-color: #000;
     z-index: 100;
     :hover {
-      background-color: transparent;
+      /* background-color: transparent;  */
     }
     .react-select__menu-list {
       overflow-y: scroll;
@@ -100,6 +91,12 @@ const CustomSelect = styled(Select)`
     }
   }
 `;
+const aquaticCreatures = [
+  { label: "طراحی", value: "طراحی" },
+  { label: "برگزاری مراسم", value: "برگزاری مراسم،" },
+  { label: "اسپانسرشیپ", value: "اسپانسرشیپ،" },
+  { label: "مارکتینگ", value: "مارکتینگ" },
+];
 
 export default function SelectField(props) {
   return (
