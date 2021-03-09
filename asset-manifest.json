@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/TEDxLavasanProject/static/css/main.8b8c2829.chunk.css",
-    "main.js": "/TEDxLavasanProject/static/js/main.a0d70a5f.chunk.js",
-    "main.js.map": "/TEDxLavasanProject/static/js/main.a0d70a5f.chunk.js.map",
-    "runtime-main.js": "/TEDxLavasanProject/static/js/runtime-main.9c3d6996.js",
-    "runtime-main.js.map": "/TEDxLavasanProject/static/js/runtime-main.9c3d6996.js.map",
-    "static/js/2.56255806.chunk.js": "/TEDxLavasanProject/static/js/2.56255806.chunk.js",
-    "static/js/2.56255806.chunk.js.map": "/TEDxLavasanProject/static/js/2.56255806.chunk.js.map",
-    "index.html": "/TEDxLavasanProject/index.html",
-    "static/css/main.8b8c2829.chunk.css.map": "/TEDxLavasanProject/static/css/main.8b8c2829.chunk.css.map",
-    "static/js/2.56255806.chunk.js.LICENSE.txt": "/TEDxLavasanProject/static/js/2.56255806.chunk.js.LICENSE.txt"
+    "main.css": "/tedxlavasan.github.io/static/css/main.8b8c2829.chunk.css",
+    "main.js": "/tedxlavasan.github.io/static/js/main.a0d70a5f.chunk.js",
+    "main.js.map": "/tedxlavasan.github.io/static/js/main.a0d70a5f.chunk.js.map",
+    "runtime-main.js": "/tedxlavasan.github.io/static/js/runtime-main.ece2db01.js",
+    "runtime-main.js.map": "/tedxlavasan.github.io/static/js/runtime-main.ece2db01.js.map",
+    "static/js/2.8dd06870.chunk.js": "/tedxlavasan.github.io/static/js/2.8dd06870.chunk.js",
+    "static/js/2.8dd06870.chunk.js.map": "/tedxlavasan.github.io/static/js/2.8dd06870.chunk.js.map",
+    "index.html": "/tedxlavasan.github.io/index.html",
+    "static/css/main.8b8c2829.chunk.css.map": "/tedxlavasan.github.io/static/css/main.8b8c2829.chunk.css.map",
+    "static/js/2.8dd06870.chunk.js.LICENSE.txt": "/tedxlavasan.github.io/static/js/2.8dd06870.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.9c3d6996.js",
-    "static/js/2.56255806.chunk.js",
+    "static/js/runtime-main.ece2db01.js",
+    "static/js/2.8dd06870.chunk.js",
     "static/css/main.8b8c2829.chunk.css",
     "static/js/main.a0d70a5f.chunk.js"
   ]
