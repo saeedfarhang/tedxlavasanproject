@@ -30,7 +30,7 @@ const Container = styled.div`
       overflow-y: scroll;
     } */
     @media screen and (max-width: 485px) {
-      height: 100%;
+      height: 90%;
       width: 100vw;
       overflow-y: scroll;
     }
@@ -38,6 +38,8 @@ const Container = styled.div`
       width: 24px;
       height: 24px;
       margin: 20px 20px 0 0;
+      top: 0;
+      position: absolute;
       @media screen and (max-width: 485px) {
         margin-top: 30px;
       }
