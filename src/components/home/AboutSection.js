@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Typography from "../../elements/Typography";
 import ArrowBtn from "../../elements/ArrowBtn";
 import ReadMorePop from "../ReadMorePop";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Container = styled.div`
   display: flex;
