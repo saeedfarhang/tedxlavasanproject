@@ -4,7 +4,7 @@ import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 export default function Routing(props) {
   return (
-    <Router basename="/">
+    <Router>
       <NavBar />
       <Switch>
         <Route exact path="/">
