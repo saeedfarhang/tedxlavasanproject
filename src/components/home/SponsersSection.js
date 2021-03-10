@@ -5,8 +5,6 @@ import Typography from "../../elements/Typography";
 import Button from "../../elements/Button";
 import TextField from "../../elements/TextField";
 import PopUpDialog from "../PopUpDialog";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const Container = styled.div`
@@ -66,15 +64,20 @@ const Container = styled.div`
       width: 90%;
       margin: 0 auto;
       .slick-list {
+        outline: none;
         direction: ltr;
         ::after {
+          outline: none;
           direction: ltr;
         }
         ::before {
+          outline: none;
           direction: ltr;
         }
       }
-
+      .slick-slide {
+        outline: none;
+      }
       .s-logo {
         width: 150px;
         height: 150px;
@@ -83,10 +86,12 @@ const Container = styled.div`
         justify-content: center;
         align-items: center;
         padding: 5%;
+        outline: none;
         img {
           width: 90%;
           filter: brightness(0) invert(1);
           opacity: 0.3;
+          outline: none;
         }
       }
     }
@@ -95,6 +100,13 @@ const Container = styled.div`
 
 export default function SponsersSection(props) {
   const [openDialog, setOpenDialog] = useState(false);
+
+  const responsive = [
+    { breakpoint: 350, settings: { slidesToShow: 2 } },
+    { breakpoint: 500, settings: { slidesToShow: 2 } },
+    { breakpoint: 800, settings: { slidesToShow: 3 } },
+    { breakpoint: 1800, settings: { slidesToShow: 4 } },
+  ];
 
   const logosRef = useRef(null);
   useEffect(() => {
@@ -122,10 +134,22 @@ export default function SponsersSection(props) {
           <div className="right"></div>
         </div>
         <div className="sponsers" ref={logosRef}>
-          <Slider adaptiveHeight arrows={false} infinite slidesToShow={2}>
-            <div>
+          <Slider
+            responsive={responsive}
+            adaptiveHeight
+            arrows={false}
+            infinite
+            autoplay={true}
+            autoplaySpeed={1000}
+            pauseOnHover={true}
+          >
+            <div
+              style={{
+                outline: "none",
+              }}
+            >
               <div className="s-logo">
-                <a href="https://aut.ac.ir/en">
+                <a target="_blank" href="https://aut.ac.ir/en">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
                     alt=""
@@ -135,7 +159,7 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <a href="https://kaarmaan.house/">
+                <a target="_blank" href="https://kaarmaan.house/">
                   <img
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
                     alt=""
@@ -145,18 +169,62 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                  alt=""
-                />
+                <a target="_blank" href="https://aut.ac.ir/en">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div>
               <div className="s-logo">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                  alt=""
-                />
+                <a target="_blank" href="https://kaarmaan.house/">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://aut.ac.ir/en">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://kaarmaan.house/">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://aut.ac.ir/en">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://kaarmaan.house/">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
           </Slider>
