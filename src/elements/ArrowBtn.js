@@ -24,19 +24,31 @@ const CustomArrowBtn = styled.div`
 
 export default function ArrowBtn(props) {
   return (
-    <CustomArrowBtn
-      width={props.width}
-      margin={props.margin}
-      noHover={props.noHover}
-    >
-      <Typography reduce="0px" fontSize="14px" textAlign="left" color="#e62b1e">
-        متن سخنرانی
-      </Typography>
-      <img
-        style={{ width: "14px", height: "7px" }}
-        src={`${process.env.PUBLIC_URL}/assets/ic-arrow-left.svg`}
-        alt=""
-      />
-    </CustomArrowBtn>
+    <>
+      {props.noDisplay ? (
+        <div></div>
+      ) : (
+        <CustomArrowBtn
+          width={props.width}
+          margin={props.margin}
+          noHover={props.noHover}
+          {...props}
+        >
+          <Typography
+            reduce="0px"
+            fontSize="14px"
+            textAlign="left"
+            color="#e62b1e"
+          >
+            {props.title}
+          </Typography>
+          <img
+            style={{ width: "14px", height: "7px" }}
+            src={`${process.env.PUBLIC_URL}/assets/ic-arrow-left.svg`}
+            alt=""
+          />
+        </CustomArrowBtn>
+      )}
+    </>
   );
 }

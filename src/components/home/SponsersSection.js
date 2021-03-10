@@ -1,3 +1,4 @@
+import emailjs from "emailjs-com";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
@@ -124,18 +125,22 @@ export default function SponsersSection(props) {
           <Slider adaptiveHeight arrows={false} infinite slidesToShow={2}>
             <div>
               <div className="s-logo">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                  alt=""
-                />
+                <a href="https://aut.ac.ir/en">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div>
               <div className="s-logo">
-                <img
-                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                  alt=""
-                />
+                <a href="https://kaarmaan.house/">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                    alt=""
+                  />
+                </a>
               </div>
             </div>
             <div>
@@ -170,32 +175,25 @@ export default function SponsersSection(props) {
         </Button>
       </div>
 
-      <PopUpDialog open={openDialog} setOpen={setOpenDialog}>
-        <Typography variant="h5" fontSize="20px" fontWeight="normal">
-          معرفی سخنران
-        </Typography>
-        <div style={{ marginTop: "40px" }}>
-          <TextField
-            label="نام و نام خانوادگی"
-            helperText="نام و نام خانوادگی خود را وارد نمایید"
-          />
-          <TextField
-            label="شماره تماس"
-            type="number"
-            helperText="شماره تماس خود را وارد نمایید"
-            style={{ marginTop: "20px" }}
-          />
-          <div
-            style={{
-              marginTop: "40px",
-              width: "100%",
-              display: "flex",
-              justifyContent: "flex-end",
-            }}
-          >
-            <Button variant="fill">ثبت درخواست</Button>
-          </div>
-        </div>
+      <PopUpDialog
+        open={openDialog}
+        setOpen={setOpenDialog}
+        title="اسپانسر شوید"
+        email_template="template_w9winaf"
+      >
+        <input type="hidden" value="sponsor" name="form_for" />
+        <TextField
+          name="name"
+          label="نام و نام خانوادگی"
+          helperText="نام و نام خانوادگی خود را وارد نمایید"
+        />
+        <TextField
+          name="phone"
+          label="شماره تماس"
+          type="number"
+          helperText="شماره تماس خود را وارد نمایید"
+          style={{ marginTop: "20px" }}
+        />
       </PopUpDialog>
     </Container>
   );

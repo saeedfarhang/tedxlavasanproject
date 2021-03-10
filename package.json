@@ -17,10 +17,12 @@
     "react-router-dom": "^5.2.0",
     "react-router-hash-link": "^2.4.0",
     "react-scripts": "4.0.3",
+    "react-scroll-percentage": "^4.2.0",
     "react-scrollbars-custom": "^4.0.25",
     "react-select": "^3.2.0",
     "react-slick": "^0.28.0",
     "slick-carousel": "^1.8.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.0"
   },

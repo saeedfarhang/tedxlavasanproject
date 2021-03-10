@@ -85,7 +85,7 @@ const NavMenu = styled.div`
   transition: all 0.2s ease-in-out;
   visibility: ${(props) => (props.open ? "visible" : "hidden")};
   opacity: ${(props) => (props.open ? "1" : "0")};
-  z-index: 100;
+  z-index: 100000;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -152,7 +152,7 @@ export default function NavBar(props) {
             <Button variant="clear">درباره</Button>
           </HashLink>
           <HashLink smooth to="/#volenteers">
-            <Button variant="clear">داوطلب ها</Button>
+            <Button variant="clear">اعضای تیم برگزاری</Button>
           </HashLink>
           <HashLink smooth to="/#tedandtedx">
             <Button variant="clear">تد چیست؟</Button>
@@ -177,7 +177,7 @@ export default function NavBar(props) {
           <Button variant="clear">درباره</Button>
         </HashLink>
         <HashLink smooth to="/#volenteers">
-          <Button variant="clear">داوطلب ها</Button>
+          <Button variant="clear">اعضای تیم برگزاری</Button>
         </HashLink>
         <HashLink smooth to="/#tedandtedx">
           <Button variant="clear">تد چیست؟</Button>

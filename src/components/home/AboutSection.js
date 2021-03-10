@@ -3,6 +3,8 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
 import ArrowBtn from "../../elements/ArrowBtn";
+import ReadMorePop from "../ReadMorePop";
+import { useState } from "react/cjs/react.development";
 
 const Container = styled.div`
   display: flex;
@@ -53,6 +55,7 @@ const Container = styled.div`
 
 export default function AboutSection() {
   const isMobile = useMediaQuery({ maxWidth: 485 });
+  const [open, setOpen] = useState(false);
   return (
     <Container>
       <img
@@ -93,7 +96,18 @@ export default function AboutSection() {
               کاهــد. بــه لواســان کــه می رســیم، از سرســام پایتخــت خبــری
               نیســت.
             </Typography>
-            <ArrowBtn margin="20px" width="auto" noHover />
+            <ArrowBtn
+              title="مطالعه بیشتر"
+              margin="20px"
+              width="auto"
+              noHover
+              onClick={() => setOpen(true)}
+            />
+            <ReadMorePop
+              open={open}
+              setOpen={setOpen}
+              headerImg={`${process.env.PUBLIC_URL}/assets/bg-teh-lav.png`}
+            />
           </>
         ) : (
           <>

@@ -122,7 +122,7 @@ export default function SpeakerCard(props) {
           <SocialLink social="facebook" href={props.facebook} />
           <SocialLink social="twitter" href={props.twitter} />
         </SocialLinks>
-        <ArrowBtn />
+        <ArrowBtn noDisplay />
       </Actions>
     </CustomSpeakerCard>
   );

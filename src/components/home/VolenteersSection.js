@@ -101,8 +101,8 @@ export default function VolenteersSection(props) {
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/SiavashGhanbari.jpg`}
             title="سیاوش قنبری"
             desc=""
-            instagram="www.instagram.com/siavashghanbari"
-            twitter="www.twitter.com/SiavashGhambari"
+            instagram="https://www.instagram.com/siavashghanbari"
+            twitter="https://www.twitter.com/SiavashGhambari"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/alaakbarian.jpg`}
@@ -137,44 +137,31 @@ export default function VolenteersSection(props) {
         </Button>
       </div>
       <div style={{ height: "80px" }}></div>
-      <PopUpDialog height="655px" open={openDialog} setOpen={setOpenDialog}>
-        <Typography variant="h5" fontSize="20px" fontWeight="normal">
-          همکاری با تدکس لواسان
-        </Typography>
-        <div style={{ marginTop: "40px" }}>
-          <form onSubmit={handleSubmit}>
-            <TextField
-              label="نام و نام خانوادگی"
-              helperText="نام و نام خانوادگی را وارد نمایید"
-              name="speaker_name"
-            />
-            <TextField
-              label="شماره تماس"
-              type="number"
-              helperText="شماره تماس خود را وارد نمایید"
-              name="speaker_phone"
-              style={{ marginTop: "20px" }}
-            />
-            <SelectField
-              lable="فیلد کاری"
-              placeholder="در چه زمینه‌ای مایل به همکاری هستید؟"
-              name="work_field"
-            />
-
-            <div
-              style={{
-                marginTop: "40px",
-                width: "100%",
-                display: "flex",
-                justifyContent: "flex-end",
-              }}
-            >
-              <Button variant="fill" type="submit">
-                ثبت درخواست
-              </Button>
-            </div>
-          </form>
-        </div>
+      <PopUpDialog
+        height="655px"
+        open={openDialog}
+        setOpen={setOpenDialog}
+        title="همکاری با تدکس لواسان"
+        email_template="template_w9winaf"
+      >
+        <input type="hidden" name="form_for" value="volenteer" />
+        <TextField
+          label="نام و نام خانوادگی"
+          helperText="نام و نام خانوادگی را وارد نمایید"
+          name="name"
+        />
+        <TextField
+          label="شماره تماس"
+          type="number"
+          helperText="شماره تماس خود را وارد نمایید"
+          name="phone"
+          style={{ marginTop: "20px" }}
+        />
+        <SelectField
+          lable="فیلد کاری"
+          placeholder="در چه زمینه‌ای مایل به همکاری هستید؟"
+          name="work_field"
+        />
       </PopUpDialog>
     </Container>
   );

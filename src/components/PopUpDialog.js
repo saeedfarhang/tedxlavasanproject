@@ -1,5 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Typography from "../elements/Typography";
+import emailjs from "emailjs-com";
+import Button from "../elements/Button";
+import Loading from "../elements/Loading";
 
 const Container = styled.div`
   transition: all 0.1s ease;
@@ -73,7 +77,8 @@ const Container = styled.div`
 
 export default function PopUpDialog(props) {
   const { open, setOpen } = props;
-  // const [open, setOpen] = useState(false);
+  const [loading, setLoading] = useState({ state: false, after: false });
+
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
@@ -81,6 +86,29 @@ export default function PopUpDialog(props) {
       document.body.style.overflow = "auto";
     }
   }, [open]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading({ state: true, after: false, fail: false });
+    emailjs
+      .sendForm(
+        "service_st8zvz8",
+        props.email_template,
+        e.target,
+        "user_Edp0gVXfp0UjIhx7PVazR"
+      )
+      .then(
+        (result) => {
+          setLoading({ state: false, after: true, fail: false });
+          console.log(result.text);
+          window.location.reload();
+        },
+        (error) => {
+          setLoading({ state: false, after: true, fail: true });
+          console.log(error.text);
+        }
+      );
+  };
 
   return (
     <Container open={open} height={props.height ? props.height : "561px"}>
@@ -95,7 +123,30 @@ export default function PopUpDialog(props) {
             onClick={() => setOpen(false)}
           />
         </div>
-        <div className="content">{props.children}</div>
+        <div className="content">
+          <Typography variant="h5" fontSize="20px" fontWeight="normal">
+            {props.title}
+          </Typography>
+          <div style={{ marginTop: "40px" }}>
+            <form action="" onSubmit={handleSubmit}>
+              {props.children}
+              <div
+                style={{
+                  marginTop: "40px",
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
+                {loading && <Loading loading={loading} />}
+                <div className="loading-container"></div>
+                <Button type="submit" variant="fill">
+                  ثبت درخواست
+                </Button>
+              </div>
+            </form>
+          </div>
+        </div>
         <img
           className="X-logo"
           src={`${process.env.PUBLIC_URL}/assets/X-logo.svg`}

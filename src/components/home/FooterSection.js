@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../../elements/Button";
+import SelectField from "../../elements/SelectField";
 import SocialLink from "../../elements/SocialLink";
+import TextField from "../../elements/TextField";
 import Typography from "../../elements/Typography";
+import PopUpDialog from "../PopUpDialog";
 
 const Container = styled.div`
   width: 100%;
@@ -51,6 +54,14 @@ const Container = styled.div`
 `;
 
 export default function FooterSection(props) {
+  const [openVolenteerDialog, setOpenVolenteerDialog] = useState(false);
+  const [openSponsorDialog, setOpenSponsorDialog] = useState(false);
+  const [openSpeakerDialog, setOpenSpeakerDialog] = useState(false);
+
+  const handleVolenteerSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.speaker_name.value);
+  };
   return (
     <Container>
       <div className="footer-f">
@@ -80,20 +91,104 @@ export default function FooterSection(props) {
           </Typography>
           <div className="social-links">
             <SocialLink hoverBlack social="facebook" href="#" />
-            <SocialLink hoverBlack social="twitter" href="#" />
-            <SocialLink hoverBlack social="instagram" href="#" />
+            <SocialLink
+              hoverBlack
+              social="twitter"
+              href="https://www.twitter.com/tedxlavasan/"
+            />
+            <SocialLink
+              hoverBlack
+              social="instagram"
+              href="https://www.instagram.com/tedxlavasan/"
+            />
           </div>
         </div>
         <div className="btns">
-          <Button style={{ marginLeft: 20 }} variant="fill">
-            داوطلب شوید
+          <Button
+            onClick={() => setOpenVolenteerDialog(true)}
+            style={{ marginLeft: 20 }}
+            variant="fill"
+          >
+            همکاری با تدکس لواسان
           </Button>
-          <Button variant="fill">حامی شوید</Button>
-          <Button style={{ marginRight: 20 }} variant="fill">
+          <Button onClick={() => setOpenSponsorDialog(true)} variant="fill">
+            حامی شوید
+          </Button>
+          <Button
+            onClick={() => setOpenSpeakerDialog(true)}
+            style={{ marginRight: 20 }}
+            variant="fill"
+          >
             معرفی سخنران
           </Button>
         </div>
       </div>
+      <PopUpDialog
+        height="655px"
+        open={openVolenteerDialog}
+        setOpen={setOpenVolenteerDialog}
+        title="همکاری با تدکس لواسان"
+        email_template="template_w9winaf"
+      >
+        <input type="hidden" name="form_for" value="volenteer" />
+        <TextField
+          label="نام و نام خانوادگی"
+          helperText="نام و نام خانوادگی را وارد نمایید"
+          name="name"
+        />
+        <TextField
+          label="شماره تماس"
+          type="number"
+          helperText="شماره تماس خود را وارد نمایید"
+          name="phone"
+          style={{ marginTop: "20px" }}
+        />
+        <SelectField
+          lable="فیلد کاری"
+          placeholder="در چه زمینه‌ای مایل به همکاری هستید؟"
+          name="work_field"
+        />
+      </PopUpDialog>
+      <PopUpDialog
+        open={openSponsorDialog}
+        setOpen={setOpenSponsorDialog}
+        title="اسپانسر شوید"
+        email_template="template_w9winaf"
+      >
+        <input type="hidden" value="sponsor" name="form_for" />
+        <TextField
+          name="name"
+          label="نام و نام خانوادگی"
+          helperText="نام و نام خانوادگی خود را وارد نمایید"
+        />
+        <TextField
+          name="phone"
+          label="شماره تماس"
+          type="number"
+          helperText="شماره تماس خود را وارد نمایید"
+          style={{ marginTop: "20px" }}
+        />
+      </PopUpDialog>
+      <PopUpDialog
+        open={openSpeakerDialog}
+        setOpen={setOpenSpeakerDialog}
+        title="معرفی سخنران"
+        email_template="template_w9winaf"
+      >
+        <input type="hidden" value="speaker" name="form_for" />
+        <TextField
+          name="name"
+          label="نام سخنران"
+          helperText="نام سخنران مورد نظر را وارد نمایید"
+        />
+        <TextField
+          name="phone"
+          label="شماره تماس"
+          type="number"
+          helperText="شماره تلفن سخنران را وارد نمایید"
+          style={{ marginTop: "20px" }}
+        />
+      </PopUpDialog>
     </Container>
   );
 }

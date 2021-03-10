@@ -4,7 +4,7 @@ import AboutLavasanSection from "../components/home/AboutLavasanSection";
 import AboutSection from "../components/home/AboutSection";
 import AboutTEDSection from "../components/home/AboutTEDSection";
 import FooterSection from "../components/home/FooterSection";
-import SpeackersSection from "../components/home/SpeackersSection";
+import SpeackersSection from "../components/home/SpeakersSection";
 import SponsersSection from "../components/home/SponsersSection";
 import TopSection from "../components/home/TopSection";
 import VolenteersSection from "../components/home/VolenteersSection";
