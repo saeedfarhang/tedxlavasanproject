@@ -68,22 +68,22 @@ export default function VolenteersSection(props) {
       <div className="grid-container">
         <Grid>
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/aliahmadi.jfif`}
-            title="علی احمدی"
-            desc=""
-            instagram="https://www.instagram.com/aliahmadi.__/"
-          />
-          <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/forooooozan.jpeg`}
             title="جواد فروزان"
             desc=""
             instagram="https://www.instagram.com/forooooozan/"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jfif`}
-            title="منصوره زینلی"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sarah_helmzadeh.jfif`}
+            title="سارا حلم زاده"
             desc=""
-            instagram="https://www.instagram.com/mansoureh.zeinaly/"
+            instagram="https://www.instagram.com/sarah_helmzadeh/"
+          />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/aliahmadi.jfif`}
+            title="علی احمدی"
+            desc=""
+            instagram="https://www.instagram.com/aliahmadi.__/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/zeynabshahedi.PNG`}
@@ -92,10 +92,10 @@ export default function VolenteersSection(props) {
             instagram="https://www.instagram.com/zeynab.shahedi/"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sarah_helmzadeh.jfif`}
-            title="سارا حلم زاده"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jfif`}
+            title="منصوره زینلی"
             desc=""
-            instagram="https://www.instagram.com/sarah_helmzadeh/"
+            instagram="https://www.instagram.com/mansoureh.zeinaly/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/SiavashGhanbari.jpg`}
