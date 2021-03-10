@@ -84,7 +84,7 @@ export default function SpeackersSection(props) {
   return (
     <Container ref={reff}>
       <div className="bg">
-        <img src="assets/x-lav-bg.svg" alt="" />
+        <img src={`${process.env.PUBLIC_URL}/assets/x-lav-bg.svg`} alt="" />
       </div>
 
       <Typography
@@ -97,13 +97,16 @@ export default function SpeackersSection(props) {
       </Typography>
       <Grid>
         <div className="x-teh-bg">
-          <img src="assets/x-teh-bg.svg" alt="x-teh-bg" />
+          <img
+            src={`${process.env.PUBLIC_URL}/assets/x-teh-bg.svg`}
+            alt="x-teh-bg"
+          />
         </div>
         <div className="dots">
-          <img src="assets/dots-1.svg" alt="" />
+          <img src={`${process.env.PUBLIC_URL}/assets/dots-1.svg`} alt="" />
         </div>
         <SpeakerCard
-          imageUrl="assets/speakers-img/alirezaemtiaz.jpg"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/alirezaemtiaz.jpg`}
           redxDir="left"
           RedxMarginRight="20px"
           title="علیرضا امتیاز"
@@ -113,7 +116,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/alirezaemtiaz/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/rayhanjafarizadeh.jfif"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/rayhanjafarizadeh.jfif`}
           redxDir="right"
           RedxMarginRight="20px"
           title="ریحان جعفری زاده"
@@ -123,7 +126,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/rayhan.jafarizadeh/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/thanksgodeverytime.jpg"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/thanksgodeverytime.jpg`}
           redxDir="left"
           RedxMarginRight="110px"
           title="شهاب جوانمردی"
@@ -133,7 +136,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/thanksgodeverytime/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/kiomarsmoradi.jpg"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/kiomarsmoradi.jpg`}
           redxDir="left"
           RedxMarginRight="80px"
           title="کیومرث مرادی"
@@ -143,7 +146,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/kiomarsmoradi/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/leilyzomorodian.jpg"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/leilyzomorodian.jpg`}
           redxDir="right"
           RedxMarginRight="30px"
           title="لیلی زمردیان"
@@ -153,7 +156,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/leilyzomorodian/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/negaralizadeh.jfif"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
           redxDir="left"
           RedxMarginRight="120px"
           title="نگار علیزاده"
@@ -163,7 +166,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/_negaralizadeh_/"
         />
         <SpeakerCard
-          imageUrl="assets/speakers-img/jalaeipour.jfif"
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/jalaeipour.jfif`}
           redxDir="left"
           RedxMarginRight="40px"
           title="محمدرضا جلائی پور"
@@ -186,7 +189,11 @@ export default function SpeackersSection(props) {
         </Button>
       </div>
       <div>
-        <img className="chaos" src="assets/chaos-h.svg" alt="" />
+        <img
+          className="chaos"
+          src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
+          alt=""
+        />
       </div>
       <PopUpDialog open={openDialog} setOpen={setOpenDialog}>
         <Typography variant="h5" fontSize="20px" fontWeight="normal">

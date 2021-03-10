@@ -86,14 +86,26 @@ export default function AboutTEDSection(props) {
   return (
     <Container>
       {isMobile ? (
-        <img src="assets/bg-about-ted-mob.png" alt="" className="head-img" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/bg-about-ted-mob.png`}
+          alt=""
+          className="head-img"
+        />
       ) : (
-        <img src="assets/bg-about-ted.png" alt="" className="head-img" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/bg-about-ted.png`}
+          alt=""
+          className="head-img"
+        />
       )}
 
       <div className="content">
         <div className="title">
-          <img className="chaos-v" src="assets/chaos-v.svg" alt="" />
+          <img
+            className="chaos-v"
+            src={`${process.env.PUBLIC_URL}/assets/chaos-v.svg`}
+            alt=""
+          />
           <Typography
             variant="h4"
             fontSize="24px"
@@ -139,7 +151,11 @@ export default function AboutTEDSection(props) {
       </div>
       <div className="content content-2">
         <div className="title">
-          <img className="chaos-v-2" src="assets/chaos-v-2.svg" alt="" />
+          <img
+            className="chaos-v-2"
+            src={`${process.env.PUBLIC_URL}/assets/chaos-v-2.svg`}
+            alt=""
+          />
           <Typography variant="h4" fontSize="24px" fontWeight="500">
             چیست؟
           </Typography>

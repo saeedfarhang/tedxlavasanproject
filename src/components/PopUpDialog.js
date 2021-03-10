@@ -88,13 +88,17 @@ export default function PopUpDialog(props) {
         <div className="close">
           <img
             className="close-btn"
-            src="assets/ic-close.svg"
+            src={`${process.env.PUBLIC_URL}/assets/ic-close.svg`}
             alt=""
             onClick={() => setOpen(false)}
           />
         </div>
         <div className="content">{props.children}</div>
-        <img className="X-logo" src="assets/X-logo.svg" alt="" />
+        <img
+          className="X-logo"
+          src={`${process.env.PUBLIC_URL}/assets/X-logo.svg`}
+          alt=""
+        />
       </div>
     </Container>
   );

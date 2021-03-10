@@ -184,7 +184,7 @@ export default function NavBar(props) {
         </HashLink>
       </NavLinks>
       <HashLink smooth to="#">
-        <NavLogo src="assets/tedx-logo.svg" />
+        <NavLogo src={`${process.env.PUBLIC_URL}/assets/tedx-logo.svg`} />
       </HashLink>
     </NavBarContainer>
   );

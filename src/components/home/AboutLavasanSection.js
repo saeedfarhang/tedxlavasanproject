@@ -103,9 +103,17 @@ export default function AboutLavasanSection(props) {
   return (
     <Container>
       {isMobile ? (
-        <img src="assets/bg-teh-to-lav-mob.png" alt="" className="bg-teh-lav" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/bg-teh-to-lav-mob.png`}
+          alt=""
+          className="bg-teh-lav"
+        />
       ) : (
-        <img src="assets/bg-teh-to-lav.png" alt="" className="bg-teh-lav" />
+        <img
+          src={`${process.env.PUBLIC_URL}/assets/bg-teh-to-lav.png`}
+          alt=""
+          className="bg-teh-lav"
+        />
       )}
       <div className="content">
         <div className="text">
@@ -144,11 +152,15 @@ export default function AboutLavasanSection(props) {
         <div className="image-container">
           <div className="image">
             <img
-              src="assets/dots-white-4.svg"
+              src={`${process.env.PUBLIC_URL}/assets/dots-white-4.svg`}
               alt=""
               className="dots-white-4"
             />
-            <img src="assets/lav-photo.png" alt="" className="lav-photo" />
+            <img
+              src={`${process.env.PUBLIC_URL}/assets/lav-photo.png`}
+              alt=""
+              className="lav-photo"
+            />
             <div className="lav-photo-under"></div>
           </div>
           <div className="image-owner">
@@ -170,7 +182,7 @@ export default function AboutLavasanSection(props) {
             style={{
               margin: "30px 0",
             }}
-            src="assets/chaos-h.svg"
+            src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
             alt=""
           />
         ) : (
@@ -179,7 +191,7 @@ export default function AboutLavasanSection(props) {
             style={{
               margin: "80px 0 60px 0",
             }}
-            src="assets/chaos-h.svg"
+            src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
             alt=""
           />
         )}

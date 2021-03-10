@@ -124,22 +124,34 @@ export default function SponsersSection(props) {
           <Slider adaptiveHeight arrows={false} infinite slidesToShow={2}>
             <div>
               <div className="s-logo">
-                <img src="assets/sponser-logo/amirkabir.png" alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                  alt=""
+                />
               </div>
             </div>
             <div>
               <div className="s-logo">
-                <img src="assets/sponser-logo/kaarmaan.png" alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                  alt=""
+                />
               </div>
             </div>
             <div>
               <div className="s-logo">
-                <img src="assets/sponser-logo/amirkabir.png" alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                  alt=""
+                />
               </div>
             </div>
             <div>
               <div className="s-logo">
-                <img src="assets/sponser-logo/kaarmaan.png" alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                  alt=""
+                />
               </div>
             </div>
           </Slider>

@@ -68,56 +68,56 @@ export default function VolenteersSection(props) {
       <div className="grid-container">
         <Grid>
           <VolenteerCard
-            imageUrl="assets/volenteer-img/aliahmadi.jfif"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/aliahmadi.jfif`}
             title="علی احمدی"
             desc=""
             instagram="https://www.instagram.com/aliahmadi.__/"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/forooooozan.jpeg"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/forooooozan.jpeg`}
             title="جواد فروزان"
             desc=""
             instagram="https://www.instagram.com/forooooozan/"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/mansourehzeinaly.jfif"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jfif`}
             title="منصوره زینلی"
             desc=""
             instagram="https://www.instagram.com/mansoureh.zeinaly/"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/zeynabshahedi.PNG"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/zeynabshahedi.PNG`}
             title="زینب شاهدی"
             desc=""
             instagram="https://www.instagram.com/zeynab.shahedi/"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/sarah_helmzadeh.jfif"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sarah_helmzadeh.jfif`}
             title="سارا حلم زاده"
             desc=""
             instagram="https://www.instagram.com/sarah_helmzadeh/"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/SiavashGhanbari.jpg"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/SiavashGhanbari.jpg`}
             title="سیاوش قنبری"
             desc=""
             instagram="www.instagram.com/siavashghanbari"
             twitter="www.twitter.com/SiavashGhambari"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/alaakbarian.jpg"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/alaakbarian.jpg`}
             title="آلا اکبریان"
             desc=""
             twitter="https://twitter.com/AlaAkbarian"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/amir_abbas_azizi.jpeg"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/amir_abbas_azizi.jpeg`}
             title="امیر عباس عزیزی"
             desc=""
             instagram="http://instagram.com/amir_abbas_azizi"
           />
           <VolenteerCard
-            imageUrl="assets/volenteer-img/s.jpg"
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/s.jpg`}
             title="سعید فرهنگ"
             desc=""
             twitter="http://twitter.com/_saeedfarhang_"

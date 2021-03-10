@@ -55,10 +55,18 @@ export default function AboutSection() {
   const isMobile = useMediaQuery({ maxWidth: 485 });
   return (
     <Container>
-      <img className="head-img" src="assets/bg-teh-lav.png" alt="" />
+      <img
+        className="head-img"
+        src={`${process.env.PUBLIC_URL}/assets/bg-teh-lav.png`}
+        alt=""
+      />
       <div className="content">
         <div className="title">
-          <img className="chaos-v" src="assets/chaos-v.svg" alt="" />
+          <img
+            className="chaos-v"
+            src={`${process.env.PUBLIC_URL}/assets/chaos-v.svg`}
+            alt=""
+          />
           <Typography
             className="title-text"
             variant="h4"

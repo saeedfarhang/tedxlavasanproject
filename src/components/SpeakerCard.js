@@ -65,7 +65,7 @@ export default function SpeakerCard(props) {
         />
         {props.redxDir === "left" ? (
           <img
-            src="assets/left-redx.svg"
+            src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
             alt=""
             style={{
               opacity: 0.8,
@@ -75,7 +75,7 @@ export default function SpeakerCard(props) {
           />
         ) : (
           <img
-            src="assets/right-redx.svg"
+            src={`${process.env.PUBLIC_URL}/assets/right-redx.svg`}
             alt=""
             style={{
               opacity: 0.8,

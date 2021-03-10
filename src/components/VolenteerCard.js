@@ -64,7 +64,11 @@ export default function VolenteerCard(props) {
       imageUrl={props.imageUrl}
     >
       <img className="card-image" src={props.imageUrl} alt="" />
-      <img src="assets/left-redx.svg" alt="redx-color-60" className="red-x" />
+      <img
+        src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
+        alt="redx-color-60"
+        className="red-x"
+      />
       <div className="image-over">
         <div className="content">
           <Typography

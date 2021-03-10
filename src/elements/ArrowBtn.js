@@ -34,7 +34,7 @@ export default function ArrowBtn(props) {
       </Typography>
       <img
         style={{ width: "14px", height: "7px" }}
-        src="assets/ic-arrow-left.svg"
+        src={`${process.env.PUBLIC_URL}/assets/ic-arrow-left.svg`}
         alt=""
       />
     </CustomArrowBtn>

@@ -25,8 +25,16 @@ export default function TopSection(props) {
 
   return (
     <CustomTopSection {...props}>
-      <img className="main-bg" src="/assets/bg-main.png" alt="main-bg" />
-      <img className="dots-1" src="assets/dots-1.svg" alt="dots-1" />
+      <img
+        className="main-bg"
+        src={`${process.env.PUBLIC_URL}/assets/bg-main.png`}
+        alt="main-bg"
+      />
+      <img
+        className="dots-1"
+        src={`${process.env.PUBLIC_URL}/assets/dots-1.svg`}
+        alt="dots-1"
+      />
       <div className="content-container">
         {isMobile ? (
           <>
@@ -74,16 +82,20 @@ export default function TopSection(props) {
           >
             لیست سخنران‌ها
           </Typography>
-          <img className="dots-2" src="assets/dots-0.svg" alt="dots-1" />
+          <img
+            className="dots-2"
+            src={`${process.env.PUBLIC_URL}/assets/dots-0.svg`}
+            alt="dots-1"
+          />
           <div className="link-to-speakers-arrow-down">
             <img
               className="arrow-down"
-              src="assets/ic-arrow-down.svg"
+              src={`${process.env.PUBLIC_URL}/assets/ic-arrow-down.svg`}
               alt="arrow-down"
             />
             <img
               className="chaos-h-link"
-              src="assets/chaos-h.svg"
+              src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
               alt="chaos-h"
             />
           </div>

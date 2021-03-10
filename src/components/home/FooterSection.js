@@ -54,7 +54,11 @@ export default function FooterSection(props) {
   return (
     <Container>
       <div className="footer-f">
-        <img className="X-logo-f" src="assets/X-logo-f.svg" alt="X-logo" />
+        <img
+          className="X-logo-f"
+          src={`${process.env.PUBLIC_URL}/assets/X-logo-f.svg`}
+          alt="X-logo"
+        />
         <div className="footer-bg">
           <Typography
             variant="h2"
