@@ -38,6 +38,9 @@ const Container = styled.div`
       width: 24px;
       height: 24px;
       margin: 20px 20px 0 0;
+      @media screen and (max-width: 485px) {
+        margin-top: 30px;
+      }
     }
     .content {
       display: flex;

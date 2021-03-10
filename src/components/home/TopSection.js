@@ -25,7 +25,7 @@ export default function TopSection(props) {
 
   return (
     <CustomTopSection {...props}>
-      <img className="main-bg" src="assets/bg-main.png" alt="main-bg" />
+      <img className="main-bg" src="/assets/bg-main.png" alt="main-bg" />
       <img className="dots-1" src="assets/dots-1.svg" alt="dots-1" />
       <div className="content-container">
         {isMobile ? (
