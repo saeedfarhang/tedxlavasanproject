@@ -90,7 +90,11 @@ export default function FooterSection(props) {
             دفتر کارمان
           </Typography>
           <div className="social-links">
-            <SocialLink hoverBlack social="facebook" href="#" />
+            <SocialLink
+              hoverBlack
+              social="email"
+              href="mailto: infotedxlavasan@gmail.com"
+            />
             <SocialLink
               hoverBlack
               social="twitter"

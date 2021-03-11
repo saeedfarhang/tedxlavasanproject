@@ -78,6 +78,8 @@ export default function VolenteersSection(props) {
             title="سارا حلم زاده"
             desc=""
             instagram="https://www.instagram.com/sarah_helmzadeh/"
+            web="http://www.Sarahelmzadeh.me/"
+            twitter="https://www.twitter.com/flirticia/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/aliahmadi.jfif`}
@@ -103,12 +105,14 @@ export default function VolenteersSection(props) {
             desc=""
             instagram="https://www.instagram.com/siavashghanbari"
             twitter="https://www.twitter.com/SiavashGhambari"
+            linkedin="https://www.linkedin.com/in/siavashghanbari/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/alaakbarian.jpg`}
             title="آلا اکبریان"
             desc=""
             twitter="https://twitter.com/AlaAkbarian"
+            linkedin="https://www.linkedin.com/in/alaakbarian"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/amir_abbas_azizi.jpeg`}
@@ -121,6 +125,7 @@ export default function VolenteersSection(props) {
             title="سعید فرهنگ"
             desc=""
             twitter="http://twitter.com/_saeedfarhang_"
+            linkedin="https://www.linkedin.com/in/saeedfarhang/"
           />
         </Grid>
       </div>
