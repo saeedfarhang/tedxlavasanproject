@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import ArrowBtn from "../../elements/ArrowBtn";
@@ -89,13 +90,13 @@ export default function AboutTEDSection(props) {
   return (
     <Container>
       {isMobile ? (
-        <img
+        <LazyLoadImage
           src={`${process.env.PUBLIC_URL}/assets/bg-about-ted-mob.png`}
           alt=""
           className="head-img"
         />
       ) : (
-        <img
+        <LazyLoadImage
           src={`${process.env.PUBLIC_URL}/assets/bg-about-ted.png`}
           alt=""
           className="head-img"
@@ -104,7 +105,7 @@ export default function AboutTEDSection(props) {
 
       <div className="content">
         <div className="title">
-          <img
+          <LazyLoadImage
             className="chaos-v"
             src={`${process.env.PUBLIC_URL}/assets/chaos-v.svg`}
             alt=""
@@ -212,7 +213,7 @@ export default function AboutTEDSection(props) {
       </div>
       <div className="content content-2">
         <div className="title">
-          <img
+          <LazyLoadImage
             className="chaos-v-2"
             src={`${process.env.PUBLIC_URL}/assets/chaos-v-2.svg`}
             alt=""

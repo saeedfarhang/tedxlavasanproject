@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import styled from "styled-components";
 import Button from "../../elements/Button";
 import SelectField from "../../elements/SelectField";

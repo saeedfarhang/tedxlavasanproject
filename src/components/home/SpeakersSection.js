@@ -5,6 +5,9 @@ import TextField from "../../elements/TextField";
 import Typography from "../../elements/Typography";
 import PopUpDialog from "../PopUpDialog";
 import SpeakerCard from "../SpeakerCard";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+//
+
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -63,7 +66,10 @@ export default function SpeackersSection(props) {
   return (
     <Container ref={reff}>
       <div className="bg">
-        <img src={`${process.env.PUBLIC_URL}/assets/x-lav-bg.svg`} alt="" />
+        <LazyLoadImage
+          src={`${process.env.PUBLIC_URL}/assets/x-lav-bg.svg`}
+          alt=""
+        />
       </div>
 
       <Typography
@@ -76,14 +82,132 @@ export default function SpeackersSection(props) {
       </Typography>
       <Grid>
         <div className="x-teh-bg">
-          <img
+          <LazyLoadImage
             src={`${process.env.PUBLIC_URL}/assets/x-teh-bg.svg`}
             alt="x-teh-bg"
           />
         </div>
         <div className="dots">
-          <img src={`${process.env.PUBLIC_URL}/assets/dots-1.svg`} alt="" />
+          <LazyLoadImage
+            src={`${process.env.PUBLIC_URL}/assets/dots-1.svg`}
+            alt=""
+          />
         </div>
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/zomorodian.jpg`}
+          redxDir="left"
+          RedxMarginRight="70px"
+          title="لیلی زمردیان"
+          desc="سخنران"
+          telegram="https://www.telegram.me/mamacenter/"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/leilyzomorodian"
+        />
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/jafarizade.jpg`}
+          redxDir="right"
+          RedxMarginRight="100px"
+          title="ریحان جعفری زاده"
+          desc=""
+          telegram="https://www.telegram.me/reyhan_jafarizadeh"
+          linkedin="https://www.linkedin.com/in/jafarizadeh-psychology"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/rayhan.jafarizadeh/"
+        />
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/javanmardi.jpg`}
+          redxDir="left"
+          RedxMarginRight="95px"
+          title="شهاب جوانمردی"
+          desc="سخنران"
+          linkedin="https://linkedin.com/in/shahabjavanmardy"
+          web="https://www.javanmardi.info"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/fanapceo/"
+        />
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/moradi.jpeg`}
+          redxDir="right"
+          RedxMarginRight="120px"
+          title="کیومرث مرادی"
+          desc=""
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/kiomarsmoradi/"
+        />
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/poornejati.jpeg`}
+          redxDir="left"
+          RedxMarginRight="80px"
+          title="مصطفی پور نجاتی"
+          desc="سخنران"
+          web="https://www.nevisandegikhallagh.ir"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/mostafa.pournejati/"
+        />
+
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
+          redxDir="left"
+          RedxMarginRight="120px"
+          title="نگار علیزاده"
+          web="www.negarinfood.com"
+          telegram="https://www.telegram.me/negarinfood"
+          desc=""
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/_negaralizadeh_/"
+        />
+
+        <SpeakerCard
+          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
+          redxDir="left"
+          RedxMarginRight="120px"
+          title="هدیه مولایی"
+          desc="سخنران"
+          telegram="https://www.telegram.me/lifestyle_travel/"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/hediye_molaei/"
+        />
+
+        <SpeakerCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/sadeqian.jpg`}
+          redxDir="left"
+          RedxMarginRight="160px"
+          title="آرمینا صادقیان"
+          desc="سخنران"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/arminasadeghian_/"
+        />
+
+        <SpeakerCard
+          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
+          redxDir="left"
+          RedxMarginRight="120px"
+          title="الناز رکابی"
+          desc="سخنران"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/elnaz.rekabi/"
+        />
+
+        <SpeakerCard
+          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
+          redxDir="left"
+          RedxMarginRight="120px"
+          title="مهرداد اسکویی"
+          desc="سخنران"
+          facebook=""
+          twitter=""
+          instagram="https://www.instagram.com/mehrdad.oskouei_official/"
+        />
+
         <SpeakerCard
           imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/alirezaemtiaz.jpg`}
           redxDir="left"
@@ -92,67 +216,7 @@ export default function SpeackersSection(props) {
           desc=""
           facebook=""
           twitter=""
-          instagram="https://www.instagram.com/alirezaemtiaz/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/rayhanjafarizadeh.jfif`}
-          redxDir="right"
-          RedxMarginRight="20px"
-          title="ریحان جعفری زاده"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/rayhan.jafarizadeh/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/thanksgodeverytime.jpg`}
-          redxDir="left"
-          RedxMarginRight="110px"
-          title="شهاب جوانمردی"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/thanksgodeverytime/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/kiomarsmoradi.jpg`}
-          redxDir="left"
-          RedxMarginRight="80px"
-          title="کیومرث مرادی"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/kiomarsmoradi/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/leilyzomorodian.jpg`}
-          redxDir="right"
-          RedxMarginRight="30px"
-          title="لیلی زمردیان"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/leilyzomorodian/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
-          redxDir="left"
-          RedxMarginRight="120px"
-          title="نگار علیزاده"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/_negaralizadeh_/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/jalaeipour.jfif`}
-          redxDir="left"
-          RedxMarginRight="40px"
-          title="محمدرضا جلائی پور"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/m.jalaeipour/"
+          instagram=""
         />
       </Grid>
       <div className="miss_speaker miss-form">
@@ -168,7 +232,7 @@ export default function SpeackersSection(props) {
         </Button>
       </div>
       <div>
-        <img
+        <LazyLoadImage
           className="chaos"
           src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
           alt=""

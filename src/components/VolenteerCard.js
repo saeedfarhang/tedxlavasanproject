@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import SocialLink from "../elements/SocialLink";
 import Typography from "../elements/Typography";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Container = styled.div`
   width: 98%;
@@ -63,8 +64,8 @@ export default function VolenteerCard(props) {
       instagram={props.instagram}
       imageUrl={props.imageUrl}
     >
-      <img className="card-image" src={props.imageUrl} alt="" />
-      <img
+      <LazyLoadImage className="card-image" src={props.imageUrl} alt="" />
+      <LazyLoadImage
         src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
         alt="redx-color-60"
         className="red-x"

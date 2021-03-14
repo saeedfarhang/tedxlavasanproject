@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Typography from "../elements/Typography";
 import ReadingProcess from "../elements/ReadingProcess";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Container = styled.div`
   width: 100%;
@@ -53,7 +54,7 @@ export default function ReadMorePop(props) {
     <Container open={open}>
       <ReadingProcess>
         <div className="header-img">
-          <img
+          <LazyLoadImage
             style={{ height: "100%", width: "100%", opacity: 0.5 }}
             src={props.headerImg}
             alt=""

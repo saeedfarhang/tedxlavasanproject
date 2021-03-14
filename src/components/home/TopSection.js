@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Button from "../../elements/Button";
 import Typography from "../../elements/Typography";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CustomTopSection = styled.div`
   display: flex;
@@ -25,12 +26,12 @@ export default function TopSection(props) {
 
   return (
     <CustomTopSection {...props}>
-      <img
+      <LazyLoadImage
         className="main-bg"
         src={`${process.env.PUBLIC_URL}/assets/bg-main.png`}
         alt="main-bg"
       />
-      <img
+      <LazyLoadImage
         className="dots-1"
         src={`${process.env.PUBLIC_URL}/assets/dots-1.svg`}
         alt="dots-1"
@@ -82,18 +83,18 @@ export default function TopSection(props) {
           >
             لیست سخنران‌ها
           </Typography>
-          <img
+          <LazyLoadImage
             className="dots-2"
             src={`${process.env.PUBLIC_URL}/assets/dots-0.svg`}
             alt="dots-1"
           />
           <div className="link-to-speakers-arrow-down">
-            <img
+            <LazyLoadImage
               className="arrow-down"
               src={`${process.env.PUBLIC_URL}/assets/ic-arrow-down.svg`}
               alt="arrow-down"
             />
-            <img
+            <LazyLoadImage
               className="chaos-h-link"
               src={`${process.env.PUBLIC_URL}/assets/chaos-h.svg`}
               alt="chaos-h"

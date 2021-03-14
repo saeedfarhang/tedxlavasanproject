@@ -1,4 +1,5 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";
@@ -103,13 +104,13 @@ export default function AboutLavasanSection(props) {
   return (
     <Container>
       {isMobile ? (
-        <img
+        <LazyLoadImage
           src={`${process.env.PUBLIC_URL}/assets/bg-teh-to-lav-mob.png`}
           alt=""
           className="bg-teh-lav"
         />
       ) : (
-        <img
+        <LazyLoadImage
           src={`${process.env.PUBLIC_URL}/assets/bg-teh-to-lav.png`}
           alt=""
           className="bg-teh-lav"
@@ -151,12 +152,12 @@ export default function AboutLavasanSection(props) {
         </div>
         <div className="image-container">
           <div className="image">
-            <img
+            <LazyLoadImage
               src={`${process.env.PUBLIC_URL}/assets/dots-white-4.svg`}
               alt=""
               className="dots-white-4"
             />
-            <img
+            <LazyLoadImage
               src={`${process.env.PUBLIC_URL}/assets/lav-photo.png`}
               alt=""
               className="lav-photo"
@@ -177,7 +178,7 @@ export default function AboutLavasanSection(props) {
       </div>
       <div>
         {isMobile ? (
-          <img
+          <LazyLoadImage
             className="chaos"
             style={{
               margin: "30px 0",
@@ -186,7 +187,7 @@ export default function AboutLavasanSection(props) {
             alt=""
           />
         ) : (
-          <img
+          <LazyLoadImage
             className="chaos"
             style={{
               margin: "80px 0 60px 0",

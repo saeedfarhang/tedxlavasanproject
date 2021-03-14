@@ -4,6 +4,7 @@ import Typography from "../elements/Typography";
 import emailjs from "emailjs-com";
 import Button from "../elements/Button";
 import Loading from "../elements/Loading";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const Container = styled.div`
   transition: all 0.1s ease;
@@ -147,7 +148,7 @@ export default function PopUpDialog(props) {
             </form>
           </div>
         </div>
-        <img
+        <LazyLoadImage
           className="X-logo"
           src={`${process.env.PUBLIC_URL}/assets/X-logo.svg`}
           alt=""

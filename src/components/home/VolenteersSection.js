@@ -70,7 +70,7 @@ export default function VolenteersSection(props) {
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/forooooozan.jpeg`}
             title="جواد فروزان"
-            desc=""
+            desc="سرپرست تیم"
             instagram="https://www.instagram.com/forooooozan/"
           />
           <VolenteerCard
@@ -84,21 +84,36 @@ export default function VolenteersSection(props) {
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/aliahmadi.jfif`}
             title="علی احمدی"
-            desc=""
+            desc="مربی سخنران"
             instagram="https://www.instagram.com/aliahmadi.__/"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/zeynabshahedi.PNG`}
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/zeynabshahedi.jpeg`}
             title="زینب شاهدی"
-            desc=""
+            desc="مربی سخنران"
             instagram="https://www.instagram.com/zeynab.shahedi/"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jfif`}
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jpeg`}
             title="منصوره زینلی"
-            desc=""
+            desc="مربی سخنران"
             instagram="https://www.instagram.com/mansoureh.zeinaly/"
           />
+
+          <VolenteerCard
+            // imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jpeg`}
+            title="شهریار حبیبیان"
+            desc="مربی سخنران"
+            instagram="https://www.instagram.com/sahriar/"
+            likedin="https://www.likedin.com/shahriar-habibian/"
+          />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sodagar.jpg`}
+            title="پرند سوداگر"
+            desc="مربی سخنران"
+            instagram="https://www.instagram.com/parandii/"
+          />
+
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/SiavashGhanbari.jpg`}
             title="سیاوش قنبری"

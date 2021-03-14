@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ArrowBtn from "../elements/ArrowBtn";
 import SocialLink from "../elements/SocialLink";
 import Typography from "../elements/Typography";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const CustomSpeakerCard = styled.div`
   width: 98%;
@@ -38,6 +39,9 @@ export default function SpeakerCard(props) {
       facebook={props.facebook}
       twitter={props.twitter}
       instagram={props.instagram}
+      linkedin={props.linkedin}
+      web={props.web}
+      telegram={props.telegram}
       redxDir={props.redxDir}
       imageUrl={props.imageUrl}
       RedxMarginRight={props.RedxMarginRight}
@@ -50,7 +54,7 @@ export default function SpeakerCard(props) {
           overflow: "hidden",
         }}
       >
-        <img
+        <LazyLoadImage
           style={{
             width: "100%",
             height: "100%",
@@ -64,7 +68,7 @@ export default function SpeakerCard(props) {
           alt=""
         />
         {props.redxDir === "left" ? (
-          <img
+          <LazyLoadImage
             src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
             alt=""
             style={{
@@ -74,7 +78,7 @@ export default function SpeakerCard(props) {
             }}
           />
         ) : (
-          <img
+          <LazyLoadImage
             src={`${process.env.PUBLIC_URL}/assets/right-redx.svg`}
             alt=""
             style={{
@@ -121,6 +125,9 @@ export default function SpeakerCard(props) {
           <SocialLink social="instagram" href={props.instagram} />
           <SocialLink social="facebook" href={props.facebook} />
           <SocialLink social="twitter" href={props.twitter} />
+          <SocialLink social="telegram" href={props.telegram} />
+          <SocialLink social="linkedin" href={props.linkedin} />
+          <SocialLink social="web" href={props.web} />
         </SocialLinks>
         <ArrowBtn noDisplay />
       </Actions>
