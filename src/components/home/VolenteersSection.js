@@ -136,12 +136,6 @@ export default function VolenteersSection(props) {
             instagram="http://instagram.com/amir_abbas_azizi"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/amir_abbas_azizi.jpeg`}
-            title="امیر عباس عزیزی"
-            desc=""
-            instagram="http://instagram.com/amir_abbas_azizi"
-          />
-          <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mohoansari.jpg`}
             title="محمدحسین انصاری"
             desc=""
