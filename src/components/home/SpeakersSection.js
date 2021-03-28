@@ -109,7 +109,7 @@ export default function SpeackersSection(props) {
           redxDir="right"
           RedxMarginRight="100px"
           title="ریحان جعفری زاده"
-          desc=""
+          desc="سخنران"
           telegram="https://www.telegram.me/reyhan_jafarizadeh"
           linkedin="https://www.linkedin.com/in/jafarizadeh-psychology"
           facebook=""
@@ -133,7 +133,7 @@ export default function SpeackersSection(props) {
           redxDir="right"
           RedxMarginRight="120px"
           title="کیومرث مرادی"
-          desc=""
+          desc="سخنران"
           facebook=""
           twitter=""
           instagram="https://www.instagram.com/kiomarsmoradi/"
@@ -187,7 +187,7 @@ export default function SpeackersSection(props) {
         />
 
         <SpeakerCard
-          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
+          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/elnazrekabi.jpeg`}
           redxDir="left"
           RedxMarginRight="120px"
           title="الناز رکابی"
@@ -213,7 +213,7 @@ export default function SpeackersSection(props) {
           redxDir="left"
           RedxMarginRight="20px"
           title="علیرضا امتیاز"
-          desc=""
+          desc="سخنران"
           facebook=""
           twitter=""
           instagram=""

@@ -101,7 +101,7 @@ export default function VolenteersSection(props) {
           />
 
           <VolenteerCard
-            // imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/mansourehzeinaly.jpeg`}
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/shahriar.jpeg`}
             title="شهریار حبیبیان"
             desc="مربی سخنران"
             instagram="https://www.instagram.com/sahriar/"
