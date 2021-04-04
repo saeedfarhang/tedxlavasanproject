@@ -64,7 +64,11 @@ export default function VolenteerCard(props) {
       instagram={props.instagram}
       imageUrl={props.imageUrl}
     >
-      <LazyLoadImage className="card-image" src={props.imageUrl} alt="" />
+      <LazyLoadImage
+        className="card-image"
+        src={props.imageUrl}
+        alt={props.title}
+      />
       <LazyLoadImage
         src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
         alt="redx-color-60"

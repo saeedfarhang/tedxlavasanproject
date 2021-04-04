@@ -104,7 +104,7 @@ export default function VolenteersSection(props) {
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/shahriar.jpeg`}
             title="شهریار حبیبیان"
             desc="مربی سخنران"
-            linkedin="https://www.likedin.com/shahriar-habibian/"
+            linkedin="https://www.linkedin.com/in/shahriar-habibian/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sodagar.jpg`}
@@ -158,7 +158,6 @@ export default function VolenteersSection(props) {
             title="زهرا مهدیان"
             desc=""
             instagram="http://instagram.com/zahrah_mahdi7an/"
-            linkedin="https://www.linkedin.com/in/saeedfarhang/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/hadiYazdi.JPG`}
