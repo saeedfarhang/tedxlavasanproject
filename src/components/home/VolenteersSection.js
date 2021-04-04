@@ -151,6 +151,7 @@ export default function VolenteersSection(props) {
             title="سعید فرهنگ"
             desc=""
             twitter="http://twitter.com/_saeedfarhang_"
+            youtube="https://www.youtube.com/channel/UCw9CcaW7usjx--4cCIYh7rg"
             linkedin="https://www.linkedin.com/in/saeedfarhang/"
           />
           <VolenteerCard

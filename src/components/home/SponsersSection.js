@@ -184,6 +184,17 @@ export default function SponsersSection(props) {
                 </a>
               </div>
             </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://www.shahrtash.com/fa/">
+                  <img
+                    style={{ height: "100%" }}
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
             <div
               style={{
                 outline: "none",
@@ -220,6 +231,17 @@ export default function SponsersSection(props) {
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div>
+              <div className="s-logo">
+                <a target="_blank" href="https://www.shahrtash.com/fa/">
+                  <img
+                    style={{ height: "100%" }}
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}
                     alt=""
                   />
                 </a>

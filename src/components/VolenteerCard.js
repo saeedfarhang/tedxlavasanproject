@@ -97,6 +97,7 @@ export default function VolenteerCard(props) {
           <SocialLink social="facebook" href={props.facebook} />
           <SocialLink social="twitter" href={props.twitter} />
           <SocialLink social="instagram" href={props.instagram} />
+          <SocialLink social="youtube" href={props.youtube} />
           <SocialLink social="linkedin" href={props.linkedin} />
           <SocialLink social="email" href={props.email} />
           <SocialLink social="web" href={props.web} />
