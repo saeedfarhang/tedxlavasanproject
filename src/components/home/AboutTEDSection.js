@@ -85,7 +85,8 @@ const Container = styled.div`
 
 export default function AboutTEDSection(props) {
   const isMobile = useMediaQuery({ maxWidth: 485 });
-  const [open, setOpen] = useState(false);
+  const [TEDOpen, setTEDOpen] = useState(false);
+  const [TEDxOpen, setTEDxOpen] = useState(false);
 
   return (
     <Container>
@@ -145,13 +146,13 @@ export default function AboutTEDSection(props) {
               margin="20px"
               width="auto"
               noHover
-              onClick={() => setOpen(true)}
+              onClick={() => setTEDOpen(true)}
             />
             <ReadMorePop
-              open={open}
-              setOpen={setOpen}
+              open={TEDOpen}
+              setOpen={setTEDOpen}
               headerImg={`${process.env.PUBLIC_URL}/assets/bg-teh-lav.png`}
-              title="تذ چیست؟"
+              title="تد چیست؟"
             >
               TED مخفف (سرواژه) سه کلمه Technology ،Entertainment ،Design است.
               (تکنولوژی و سرگرمی و طراحی) مجموعه‌ TED یک سازمان غیر انتفاعی است
@@ -249,13 +250,13 @@ export default function AboutTEDSection(props) {
               margin="20px"
               width="auto"
               noHover
-              onClick={() => setOpen(true)}
+              onClick={() => setTEDxOpen(true)}
             />
             <ReadMorePop
-              open={open}
-              setOpen={setOpen}
+              open={TEDxOpen}
+              setOpen={setTEDxOpen}
               headerImg={`${process.env.PUBLIC_URL}/assets/bg-teh-lav.png`}
-              title="تذکس چیست؟"
+              title="تدکس چیست؟"
             >
               تدکس مجموعه ایی از چندین سخنرانی افراد متفکر و متخصص در حوزه های
               گوناگون است که ایده ها، تجربیات و دانش خود را با زبانی ساده و جذاب

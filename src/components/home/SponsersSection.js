@@ -151,7 +151,23 @@ export default function SponsersSection(props) {
               <div className="s-logo">
                 <a target="_blank" href="https://aut.ac.ir/en">
                   <img
+                    style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              style={{
+                outline: "none",
+              }}
+            >
+              <div className="s-logo">
+                <a target="_blank" href="https://redidea.ir/">
+                  <img
+                    style={{ height: "100%" }}
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
                     alt=""
                   />
                 </a>
@@ -161,17 +177,38 @@ export default function SponsersSection(props) {
               <div className="s-logo">
                 <a target="_blank" href="https://kaarmaan.house/">
                   <img
+                    style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
                     alt=""
                   />
                 </a>
               </div>
             </div>
-            <div>
+            <div
+              style={{
+                outline: "none",
+              }}
+            >
               <div className="s-logo">
                 <a target="_blank" href="https://aut.ac.ir/en">
                   <img
+                    style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
+                    alt=""
+                  />
+                </a>
+              </div>
+            </div>
+            <div
+              style={{
+                outline: "none",
+              }}
+            >
+              <div className="s-logo">
+                <a target="_blank" href="https://redidea.ir/">
+                  <img
+                    style={{ height: "100%" }}
+                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
                     alt=""
                   />
                 </a>
@@ -181,46 +218,7 @@ export default function SponsersSection(props) {
               <div className="s-logo">
                 <a target="_blank" href="https://kaarmaan.house/">
                   <img
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a target="_blank" href="https://aut.ac.ir/en">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a target="_blank" href="https://kaarmaan.house/">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a target="_blank" href="https://aut.ac.ir/en">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a target="_blank" href="https://kaarmaan.house/">
-                  <img
+                    style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
                     alt=""
                   />

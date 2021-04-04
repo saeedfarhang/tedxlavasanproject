@@ -70,7 +70,7 @@ export default function VolenteersSection(props) {
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/forooooozan.jpeg`}
             title="جواد فروزان"
-            desc="سرپرست تیم"
+            desc=""
             instagram="https://www.instagram.com/forooooozan/"
           />
           <VolenteerCard
@@ -104,8 +104,7 @@ export default function VolenteersSection(props) {
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/shahriar.jpeg`}
             title="شهریار حبیبیان"
             desc="مربی سخنران"
-            instagram="https://www.instagram.com/sahriar/"
-            likedin="https://www.likedin.com/shahriar-habibian/"
+            linkedin="https://www.likedin.com/shahriar-habibian/"
           />
           <VolenteerCard
             imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/sodagar.jpg`}
@@ -148,11 +147,30 @@ export default function VolenteersSection(props) {
             instagram="http://instagram.com/_bita_jafari"
           />
           <VolenteerCard
-            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/s.jpg`}
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/saeedfarhang.jpg`}
             title="سعید فرهنگ"
             desc=""
             twitter="http://twitter.com/_saeedfarhang_"
             linkedin="https://www.linkedin.com/in/saeedfarhang/"
+          />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/zahramahdian.jpg`}
+            title="زهرا مهدیان"
+            desc=""
+            instagram="http://instagram.com/zahrah_mahdi7an/"
+            linkedin="https://www.linkedin.com/in/saeedfarhang/"
+          />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/hadiYazdi.JPG`}
+            title="هادی یزدی"
+            desc=""
+            instagram="https://www.instagram.com/hadiyazdiaznaveh/"
+          />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/alirostami.jpg`}
+            title="علی رستمی"
+            desc=""
+            instagram="https://instagram.com/ali.rostami.1980"
           />
         </Grid>
       </div>
