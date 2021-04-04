@@ -138,7 +138,7 @@ export default function SpeackersSection(props) {
           twitter=""
           instagram="https://www.instagram.com/kiomarsmoradi/"
         />
-        <SpeakerCard
+        {/* <SpeakerCard
           imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/poornejati.jpeg`}
           redxDir="left"
           RedxMarginRight="80px"
@@ -148,7 +148,7 @@ export default function SpeackersSection(props) {
           facebook=""
           twitter=""
           instagram="https://www.instagram.com/mostafa.pournejati/"
-        />
+        /> */}
 
         <SpeakerCard
           imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
@@ -197,7 +197,7 @@ export default function SpeackersSection(props) {
           instagram="https://www.instagram.com/elnaz.rekabi/"
         />
 
-        <SpeakerCard
+        {/* <SpeakerCard
           // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
           redxDir="left"
           RedxMarginRight="120px"
@@ -206,7 +206,7 @@ export default function SpeackersSection(props) {
           facebook=""
           twitter=""
           instagram="https://www.instagram.com/mehrdad.oskouei_official/"
-        />
+        /> */}
 
         <SpeakerCard
           imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/alirezaemtiaz.jpg`}
