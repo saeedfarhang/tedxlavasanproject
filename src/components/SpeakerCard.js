@@ -62,7 +62,7 @@ export default function SpeakerCard(props) {
             filter: "grayscale(1)",
             position: "absolute",
             zIndex: -1,
-            border: "solid 1px #B2B2B2",
+            border: "solid 1px #B2B2B220",
           }}
           src={props.imageUrl}
           alt=""

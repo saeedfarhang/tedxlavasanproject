@@ -44,7 +44,7 @@ const Container = styled.div`
       }
     }
     .about-tl-text {
-      margin: 20px 14vw;
+      margin: 20px 180px;
       line-height: 40px;
       text-align: right;
       @media screen and (max-width: 485px) {

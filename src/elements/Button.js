@@ -52,7 +52,7 @@ const FillBack = styled.div`
   left: 0;
   right: 0;
   background-color: ${(props) => (props.disable ? "transparent" : "#e62b1e")};
-  transform: translateX(-100%);
+  transform: translateX(100%);
   ${(props) =>
     props.disable
       ? ``
