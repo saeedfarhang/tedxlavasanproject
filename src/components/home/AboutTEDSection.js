@@ -55,7 +55,7 @@ const Container = styled.div`
   .content-2 {
     margin-top: 100px;
     .about-tl-text {
-      margin: 20px 14vw;
+      margin: 20px 180px;
       line-height: 40px;
       text-align: left;
       @media screen and (max-width: 485px) {

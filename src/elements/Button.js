@@ -103,7 +103,7 @@ export default function Button(props) {
           >
             {props.children}
           </Typography>
-          <OutLineHolder hover={hover} active={active} />
+          <OutLineHolder className="under-line" hover={hover} active={active} />
         </div>
       )}
     </CustomButton>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import Button from "../elements/Button";
@@ -26,6 +27,16 @@ const NavBarContainer = styled.div`
 `;
 
 const NavLinks = styled.div`
+  .active {
+    color: #e62b1e;
+
+    .under-line {
+      width: 30px;
+      height: 2px;
+      transform: translateX(0);
+      margin: 8px auto 0 auto;
+    }
+  }
   justify-content: center;
   display: none;
   @media screen and (min-width: 850px) {
@@ -125,7 +136,22 @@ export default function NavBar(props) {
   const [scrolling, setScrolling] = useState(false);
   const [scrollTop, setScrollTop] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activateLink, setActivateLink] = useState("");
+  const [navBtns, setNavBtns] = useState([]);
 
+  useEffect(() => {
+    setNavBtns([...document.getElementsByClassName("nav-btn")]);
+    setActivateLink(props.activateLink);
+
+    navBtns.map((btn) => {
+      if (activateLink === btn.id) {
+        console.log(activateLink, btn.id);
+        btn.classList.add("active");
+      }
+    });
+  }, [activateLink]);
+
+  console.log(navBtns);
   useEffect(() => {
     const onScroll = (e) => {
       setScrollTop(e.target.documentElement.scrollTop);
@@ -145,17 +171,25 @@ export default function NavBar(props) {
         </div>
         <NavMenu open={menuOpen} scrollTop={scrollTop}>
           <div style={{ height: 30 }}></div>
-          <HashLink smooth to="/#speakers">
-            <Button variant="clear">سخنران ها</Button>
-          </HashLink>
+          <Link to="/faq">
+            <Button className="nav-btn" id="faq" variant="clear">
+              سوالات متداول
+            </Button>
+          </Link>
           <HashLink smooth to="/#about">
-            <Button variant="clear">درباره</Button>
+            <Button className="nav-btn" variant="clear">
+              آموزش ثبت نام
+            </Button>
           </HashLink>
           <HashLink smooth to="/#volenteers">
-            <Button variant="clear">اعضای تیم برگزاری</Button>
+            <Button className="nav-btn" variant="clear">
+              سخنرانان
+            </Button>
           </HashLink>
           <HashLink smooth to="/#tedandtedx">
-            <Button variant="clear">تد چیست؟</Button>
+            <Button className="nav-btn" variant="clear">
+              حامیان
+            </Button>
           </HashLink>
           <HashLink style={{ margin: "auto 0 0 0" }} smooth to="/#">
             <Button margin="20px" variant="fill">
@@ -170,22 +204,30 @@ export default function NavBar(props) {
             خرید بلیط
           </Button>
         </HashLink>
-        <HashLink smooth to="/#speakers">
-          <Button variant="clear">سخنران ها</Button>
-        </HashLink>
+        <Link to="/faq">
+          <Button className="nav-btn" id="faq" variant="clear">
+            سوالات متداول
+          </Button>
+        </Link>
         <HashLink smooth to="/#about">
-          <Button variant="clear">درباره</Button>
+          <Button className="nav-btn" variant="clear">
+            آموزش ثبت نام
+          </Button>
         </HashLink>
         <HashLink smooth to="/#volenteers">
-          <Button variant="clear">اعضای تیم برگزاری</Button>
+          <Button className="nav-btn" variant="clear">
+            سخنرانان
+          </Button>
         </HashLink>
         <HashLink smooth to="/#tedandtedx">
-          <Button variant="clear">تد چیست؟</Button>
+          <Button className="nav-btn" variant="clear">
+            حامیان
+          </Button>
         </HashLink>
       </NavLinks>
-      <HashLink smooth to="#">
+      <Link to="/">
         <NavLogo src={`${process.env.PUBLIC_URL}/assets/tedx-logo.svg`} />
-      </HashLink>
+      </Link>
     </NavBarContainer>
   );
 }

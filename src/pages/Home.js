@@ -8,6 +8,7 @@ import SpeackersSection from "../components/home/SpeakersSection";
 import SponsersSection from "../components/home/SponsersSection";
 import TopSection from "../components/home/TopSection";
 import VolenteersSection from "../components/home/VolenteersSection";
+import NavBar from "../components/NavBar";
 import "./styles.css";
 
 const HomeContainer = styled.div``;
@@ -17,6 +18,8 @@ export default function Home() {
 
   return (
     <HomeContainer>
+      <NavBar />
+
       <div>
         <TopSection speakerRef={speakerRef} />
       </div>
