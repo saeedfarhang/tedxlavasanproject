@@ -11,23 +11,23 @@ export default function Routing(props) {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/">
-          <Home />
+        <Route exact path="/" component={Home}>
+          {/* <Home /> */}
         </Route>
-        <Route exact path="/faq">
-          <Faq />
+        <Route exact path="/faq" component={Faq}>
+          {/* <Faq /> */}
         </Route>
-        <Route exact path="/how">
-          <HowSignup />
+        <Route exact path="/how" component={HowSignup}>
+          {/* <HowSignup /> */}
         </Route>
-        <Route exact path="/speakers">
-          <Speakers />
+        <Route exact path="/speakers" component={Speakers}>
+          {/* <Speakers /> */}
         </Route>
-        <Route exact path="/signup">
-          <SignUp />
+        <Route exact path="/signup" component={SignUp}>
+          {/* <SignUp /> */}
         </Route>
-        <Route exact path="/speakers/:id">
-          <SpeakerDetail />
+        <Route exact path="/speakers/:id" component={SpeakerDetail}>
+          {/* <SpeakerDetail /> */}
         </Route>
       </Switch>
     </Router>
