@@ -15,7 +15,7 @@ const NavBarContainer = styled.div`
   background: ${(props) =>
     props.scrollTop > 50
       ? "linear-gradient(180deg, #000000, #00000000)"
-      : "#000"};
+      : "linear-gradient(180deg, #000000, #00000000)"};
   height: ${(props) => (props.scrollTop > 50 ? "100px" : "130px")};
   @media screen and (max-width: 600px) {
     height: ${(props) => (props.scrollTop > 50 ? "100px" : "150px")};
@@ -145,13 +145,11 @@ export default function NavBar(props) {
 
     navBtns.map((btn) => {
       if (activateLink === btn.id) {
-        console.log(activateLink, btn.id);
         btn.classList.add("active");
       }
     });
   }, [activateLink]);
 
-  console.log(navBtns);
   useEffect(() => {
     const onScroll = (e) => {
       setScrollTop(e.target.documentElement.scrollTop);
@@ -176,58 +174,58 @@ export default function NavBar(props) {
               سوالات متداول
             </Button>
           </Link>
-          <HashLink smooth to="/#about">
-            <Button className="nav-btn" variant="clear">
+          <Link to="/how">
+            <Button className="nav-btn" id="howSign" variant="clear">
               آموزش ثبت نام
             </Button>
-          </HashLink>
-          <HashLink smooth to="/#volenteers">
-            <Button className="nav-btn" variant="clear">
+          </Link>
+          <Link to="/speakers" id="speakers">
+            <Button className="nav-btn" id="speakers" variant="clear">
               سخنرانان
             </Button>
-          </HashLink>
+          </Link>
           <HashLink smooth to="/#tedandtedx">
             <Button className="nav-btn" variant="clear">
               حامیان
             </Button>
           </HashLink>
-          <HashLink style={{ margin: "auto 0 0 0" }} smooth to="/#">
+          <Link style={{ margin: "auto 0 0 0" }} to="/signup">
             <Button margin="20px" variant="fill">
               خرید بلیط
             </Button>
-          </HashLink>
+          </Link>
         </NavMenu>
       </HambMenu>
       <NavLinks>
-        <HashLink smooth to="/#">
+        <Link to="/signup">
           <Button margin="0 0 0 10px" variant="fill">
             خرید بلیط
           </Button>
-        </HashLink>
+        </Link>
         <Link to="/faq">
           <Button className="nav-btn" id="faq" variant="clear">
             سوالات متداول
           </Button>
         </Link>
-        <HashLink smooth to="/#about">
-          <Button className="nav-btn" variant="clear">
+        <Link to="/how">
+          <Button className="nav-btn" id="howSign" variant="clear">
             آموزش ثبت نام
           </Button>
-        </HashLink>
-        <HashLink smooth to="/#volenteers">
-          <Button className="nav-btn" variant="clear">
+        </Link>
+        <Link to="/speakers">
+          <Button className="nav-btn" id="speakers" variant="clear">
             سخنرانان
           </Button>
-        </HashLink>
+        </Link>
         <HashLink smooth to="/#tedandtedx">
           <Button className="nav-btn" variant="clear">
             حامیان
           </Button>
         </HashLink>
       </NavLinks>
-      <Link to="/">
+      <HashLink smooth to="/#">
         <NavLogo src={`${process.env.PUBLIC_URL}/assets/tedx-logo.svg`} />
-      </Link>
+      </HashLink>
     </NavBarContainer>
   );
 }

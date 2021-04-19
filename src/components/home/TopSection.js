@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Button from "../../elements/Button";
 import Typography from "../../elements/Typography";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { Link } from "react-router-dom";
 
 const CustomTopSection = styled.div`
   display: flex;
@@ -71,9 +72,9 @@ export default function TopSection(props) {
           </>
         )}
 
-        <Button disable variant="fill">
-          خرید بلیط
-        </Button>
+        <Link to="/signup">
+          <Button variant="fill">خرید بلیط</Button>
+        </Link>
         <div className="link-to-speakers-container" onClick={scrollHandle}>
           <Typography
             color="#B2B2B2"

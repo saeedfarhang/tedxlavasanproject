@@ -1,4 +1,3 @@
-import emailjs from "emailjs-com";
 import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Typography from "../../elements/Typography";

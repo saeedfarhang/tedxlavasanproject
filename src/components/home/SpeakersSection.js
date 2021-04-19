@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styled from "styled-components";
 import Button from "../../elements/Button";
 import TextField from "../../elements/TextField";
@@ -6,6 +6,7 @@ import Typography from "../../elements/Typography";
 import PopUpDialog from "../PopUpDialog";
 import SpeakerCard from "../SpeakerCard";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import { speakersData } from "../../data/speakers";
 //
 
 const Container = styled.div`
@@ -61,7 +62,12 @@ const Grid = styled.div`
 
 export default function SpeackersSection(props) {
   const [openDialog, setOpenDialog] = useState(false);
+  const [speakers, setSpeakers] = useState([]);
   const reff = useRef();
+
+  useEffect(() => {
+    setSpeakers(speakersData);
+  }, []);
 
   return (
     <Container ref={reff}>
@@ -93,131 +99,26 @@ export default function SpeackersSection(props) {
             alt=""
           />
         </div>
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/zomorodian.jpg`}
-          redxDir="left"
-          RedxMarginRight="70px"
-          title="لیلی زمردیان"
-          desc="سخنران"
-          telegram="https://www.telegram.me/mamacenter/"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/leilyzomorodian"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/jafarizade.jpg`}
-          redxDir="right"
-          RedxMarginRight="100px"
-          title="ریحان جعفری زاده"
-          desc="سخنران"
-          telegram="https://www.telegram.me/reyhan_jafarizadeh"
-          linkedin="https://www.linkedin.com/in/jafarizadeh-psychology"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/rayhan.jafarizadeh/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/javanmardi.jpg`}
-          redxDir="left"
-          RedxMarginRight="95px"
-          title="شهاب جوانمردی"
-          desc="سخنران"
-          linkedin="https://linkedin.com/in/shahabjavanmardy"
-          web="https://www.javanmardi.info"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/fanapceo/"
-        />
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/moradi.jpeg`}
-          redxDir="right"
-          RedxMarginRight="120px"
-          title="کیومرث مرادی"
-          desc="سخنران"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/kiomarsmoradi/"
-        />
-        {/* <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/poornejati.jpeg`}
-          redxDir="left"
-          RedxMarginRight="80px"
-          title="مصطفی پور نجاتی"
-          desc="سخنران"
-          web="https://www.nevisandegikhallagh.ir"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/mostafa.pournejati/"
-        /> */}
-
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
-          redxDir="left"
-          RedxMarginRight="120px"
-          title="نگار علیزاده"
-          web="www.negarinfood.com"
-          telegram="https://www.telegram.me/negarinfood"
-          desc=""
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/_negaralizadeh_/"
-        />
-
-        <SpeakerCard
-          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
-          redxDir="left"
-          RedxMarginRight="120px"
-          title="هدیه مولایی"
-          desc="سخنران"
-          telegram="https://www.telegram.me/lifestyle_travel/"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/hediye_molaei/"
-        />
-
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/sadeqian.jpg`}
-          redxDir="left"
-          RedxMarginRight="160px"
-          title="آرمینا صادقیان"
-          desc="سخنران"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/arminasadeghian_/"
-        />
-
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/elnazrekabi.jpeg`}
-          redxDir="left"
-          RedxMarginRight="120px"
-          title="الناز رکابی"
-          desc="سخنران"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/elnaz.rekabi/"
-        />
-
-        {/* <SpeakerCard
-          // imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/negaralizadeh.jfif`}
-          redxDir="left"
-          RedxMarginRight="120px"
-          title="مهرداد اسکویی"
-          desc="سخنران"
-          facebook=""
-          twitter=""
-          instagram="https://www.instagram.com/mehrdad.oskouei_official/"
-        /> */}
-
-        <SpeakerCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/alirezaemtiaz.jpg`}
-          redxDir="left"
-          RedxMarginRight="20px"
-          title="علیرضا امتیاز"
-          desc="سخنران"
-          facebook=""
-          twitter=""
-          instagram=""
-        />
+        {/* ___________________ */}
+        {speakers.length > 0 &&
+          speakers.map((speaker) => (
+            <SpeakerCard
+              key={speaker.id}
+              id={speaker.id}
+              imageUrl={speaker.imageUrl}
+              redxDir={speaker.redxDir}
+              RedxMarginRight={speaker.RedxMarginRight}
+              title={speaker.title}
+              desc={speaker.desc}
+              facebook={speaker.facebook}
+              twitter={speaker.twitter}
+              instagram={speaker.instagram}
+              telegram={speaker.telegram}
+              linkedin={speaker.linkedin}
+              web={speaker.web}
+            />
+          ))}
+        {/* ___________________ */}
       </Grid>
       <div className="miss_speaker miss-form">
         <Typography textAlign="center" fontSize="16px" fontWeight="300">

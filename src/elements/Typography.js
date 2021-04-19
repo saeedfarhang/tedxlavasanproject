@@ -17,6 +17,7 @@ const CustomTypography = styled.span`
   text-align: ${(props) => (props.textAlign ? props.textAlign : "center")};
   z-index: 100;
   width: ${(props) => (props.width ? props.width : "")};
+  line-height: ${(props) => (props.lineHeight ? props.lineHeight : "")};
   /* @media screen and (min-width: 375px) {
     font-size: calc(
       ${(props) => props.fontSize} -
