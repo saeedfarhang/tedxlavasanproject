@@ -9,7 +9,7 @@ import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./pages/Speakers";
 export default function Routing(props) {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route exact path="/">
           <Home />
