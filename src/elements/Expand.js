@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react/cjs/react.development";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Typography from "./Typography";
 
@@ -43,7 +42,10 @@ export default function Expand(props) {
         <Typography textAlign="right" fontSize="16px" fontWeight="normal">
           {props.title}
         </Typography>
-        <img src={`${process.env.PUBLIC_URL}/assets/ic-arrow-down.svg`} />
+        <img
+          alt="arrow down"
+          src={`${process.env.PUBLIC_URL}/assets/ic-arrow-down.svg`}
+        />
       </div>
       <div className="on-open">{props.children}</div>
     </Container>

@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { useEffect, useState } from "react/cjs/react.development";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import { speakersData } from "../data/speakers";

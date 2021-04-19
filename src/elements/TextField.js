@@ -60,7 +60,7 @@ export default function TextField(props) {
   };
 
   return (
-    <Container style={props.style}>
+    <Container style={props.style} hover={hover}>
       <Typography
         margin={"0 0 10px 0"}
         textAlign="right"

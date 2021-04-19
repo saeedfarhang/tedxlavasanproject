@@ -1,6 +1,5 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar";
 import Faq from "./pages/Faq";
 import Home from "./pages/Home";
 import HowSignup from "./pages/HowSignup";

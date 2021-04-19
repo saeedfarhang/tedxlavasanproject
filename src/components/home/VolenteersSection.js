@@ -49,11 +49,6 @@ const Grid = styled.div`
 export default function VolenteersSection(props) {
   const [openDialog, setOpenDialog] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.speaker_name.value);
-  };
-
   return (
     <Container {...props}>
       <Typography

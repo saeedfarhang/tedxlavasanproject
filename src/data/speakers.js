@@ -125,8 +125,8 @@ export const speakersData = [
 ];
 
 // ____________________________________________
-{
-  /*
+
+/*
 <SpeakerCard
 imageUrl={`${process.env.PUBLIC_URL}/assets/speakers-img/zomorodian.jpg`}
 redxDir="left"
@@ -253,4 +253,3 @@ instagram=""
 />
 
 */
-}

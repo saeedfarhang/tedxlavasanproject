@@ -148,7 +148,12 @@ export default function SponsersSection(props) {
               }}
             >
               <div className="s-logo">
-                <a target="_blank" href="https://aut.ac.ir/en">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  rel="noreferrer"
+                  href="https://aut.ac.ir/en"
+                >
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
@@ -163,7 +168,7 @@ export default function SponsersSection(props) {
               }}
             >
               <div className="s-logo">
-                <a target="_blank" href="https://redidea.ir/">
+                <a target="_blank" rel="noreferrer" href="https://redidea.ir/">
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
@@ -174,7 +179,11 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <a target="_blank" href="https://kaarmaan.house/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://kaarmaan.house/"
+                >
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
@@ -185,7 +194,11 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <a target="_blank" href="https://www.shahrtash.com/fa/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.shahrtash.com/fa/"
+                >
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}
@@ -200,7 +213,7 @@ export default function SponsersSection(props) {
               }}
             >
               <div className="s-logo">
-                <a target="_blank" href="https://aut.ac.ir/en">
+                <a target="_blank" rel="noreferrer" href="https://aut.ac.ir/en">
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
@@ -215,7 +228,7 @@ export default function SponsersSection(props) {
               }}
             >
               <div className="s-logo">
-                <a target="_blank" href="https://redidea.ir/">
+                <a target="_blank" rel="noreferrer" href="https://redidea.ir/">
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
@@ -226,7 +239,11 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <a target="_blank" href="https://kaarmaan.house/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://kaarmaan.house/"
+                >
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
@@ -237,7 +254,11 @@ export default function SponsersSection(props) {
             </div>
             <div>
               <div className="s-logo">
-                <a target="_blank" href="https://www.shahrtash.com/fa/">
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.shahrtash.com/fa/"
+                >
                   <img
                     style={{ height: "100%" }}
                     src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}

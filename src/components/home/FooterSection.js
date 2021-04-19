@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
 import styled from "styled-components";
 import Button from "../../elements/Button";
 import SelectField from "../../elements/SelectField";
@@ -59,10 +58,6 @@ export default function FooterSection(props) {
   const [openSponsorDialog, setOpenSponsorDialog] = useState(false);
   const [openSpeakerDialog, setOpenSpeakerDialog] = useState(false);
 
-  const handleVolenteerSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.speaker_name.value);
-  };
   return (
     <Container>
       <div className="footer-f">

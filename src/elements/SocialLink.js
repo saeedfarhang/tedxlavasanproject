@@ -21,7 +21,7 @@ const Icon = styled.svg`
 export default function SocialLink(props) {
   return (
     <Container href={props.href}>
-      <a href={props.href} target="_blank">
+      <a href={props.href} target="_blank" rel="noreferrer">
         {props.social === "instagram" ? (
           <>
             <Icon
