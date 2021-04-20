@@ -9,6 +9,10 @@ const Container = styled.div`
   border: solid 1px ${(props) => (props.open ? "#e62b1e" : "#464646")};
   cursor: pointer;
   transition: all 0.3s ease-out;
+  @media screen and (max-width: 555px) {
+    margin: 30px 20px;
+    padding: 20px;
+  }
   :hover {
     border: solid 1px #e62b1e;
     min-height: ${(props) => (props.open ? "85px" : "95px")};

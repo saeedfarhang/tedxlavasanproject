@@ -1,8 +1,8 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
-import { speakersData } from "../data/speakers";
 import SocialLink from "../elements/SocialLink";
 import Typography from "../elements/Typography";
 
@@ -15,6 +15,9 @@ const Container = styled.div`
     height: 300px;
     width: 100%;
     z-index: -1;
+    @media screen and (max-width: 600px) {
+      height: 150px;
+    }
   }
   .speaker {
     padding: 170px 150px 50px 0;
@@ -22,10 +25,17 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    @media screen and (max-width: 600px) {
+      padding: 110px 20px 30px 0;
+    }
     .image {
       width: 200px;
       height: 253px;
       margin-left: 30px;
+      @media screen and (max-width: 600px) {
+        width: 120px;
+        height: 150px;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -47,7 +57,10 @@ export default function SpeakerDetail(props) {
   let { id } = useParams();
   const [speaker, setSpeaker] = useState({});
   useEffect(() => {
-    setSpeaker(speakersData.find((speaker) => speaker.id == id));
+    // setSpeaker(speakersData.find((speaker) => speaker.id == id));
+    axios
+      .get("data/speakers.json")
+      .then((res) => setSpeaker(res.data.find((speaker) => speaker.id == id)));
   }, []);
   return (
     <Container>

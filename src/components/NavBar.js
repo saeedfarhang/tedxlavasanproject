@@ -185,7 +185,7 @@ export default function NavBar(props) {
             </Button>
           </Link>
           <HashLink smooth to="/#tedandtedx">
-            <Button className="nav-btn" variant="clear">
+            <Button className="nav-btn" id="sponsers" variant="clear">
               حامیان
             </Button>
           </HashLink>
@@ -218,7 +218,7 @@ export default function NavBar(props) {
           </Button>
         </Link>
         <HashLink smooth to="/#tedandtedx">
-          <Button className="nav-btn" variant="clear">
+          <Button className="nav-btn" id="sponsers" variant="clear">
             حامیان
           </Button>
         </HashLink>

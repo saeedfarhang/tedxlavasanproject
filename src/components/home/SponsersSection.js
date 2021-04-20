@@ -3,8 +3,10 @@ import styled from "styled-components";
 import Typography from "../../elements/Typography";
 import Button from "../../elements/Button";
 import TextField from "../../elements/TextField";
+import SponsorCard from "../../elements/SponsorCard";
 import PopUpDialog from "../PopUpDialog";
 import Slider from "react-slick";
+import axios from "axios";
 
 const Container = styled.div`
   margin-top: 120px;
@@ -77,29 +79,13 @@ const Container = styled.div`
       .slick-slide {
         outline: none;
       }
-      .s-logo {
-        width: 150px;
-        height: 150px;
-        /* margin: 70px; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 5%;
-        outline: none;
-        img {
-          width: 90%;
-          filter: brightness(0) invert(1);
-          opacity: 0.3;
-          outline: none;
-        }
-      }
     }
   }
 `;
 
 export default function SponsersSection(props) {
   const [openDialog, setOpenDialog] = useState(false);
-
+  const [sponsers, setSponsers] = useState([]);
   const responsive = [
     { breakpoint: 350, settings: { slidesToShow: 2 } },
     { breakpoint: 500, settings: { slidesToShow: 2 } },
@@ -114,6 +100,10 @@ export default function SponsersSection(props) {
   const click = () => {
     logosRef.current.scrollTo(-100, 0);
   };
+
+  useEffect(() => {
+    axios.get("data/sponsers.json").then((res) => setSponsers(res.data));
+  }, []);
 
   return (
     <Container>
@@ -142,131 +132,13 @@ export default function SponsersSection(props) {
             autoplaySpeed={1000}
             pauseOnHover={true}
           >
-            <div
-              style={{
-                outline: "none",
-              }}
-            >
-              <div className="s-logo">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  rel="noreferrer"
-                  href="https://aut.ac.ir/en"
-                >
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div
-              style={{
-                outline: "none",
-              }}
-            >
-              <div className="s-logo">
-                <a target="_blank" rel="noreferrer" href="https://redidea.ir/">
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://kaarmaan.house/"
-                >
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.shahrtash.com/fa/"
-                >
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div
-              style={{
-                outline: "none",
-              }}
-            >
-              <div className="s-logo">
-                <a target="_blank" rel="noreferrer" href="https://aut.ac.ir/en">
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/amirkabir.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div
-              style={{
-                outline: "none",
-              }}
-            >
-              <div className="s-logo">
-                <a target="_blank" rel="noreferrer" href="https://redidea.ir/">
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/honaralmas.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://kaarmaan.house/"
-                >
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/kaarmaan.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
-            <div>
-              <div className="s-logo">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href="https://www.shahrtash.com/fa/"
-                >
-                  <img
-                    style={{ height: "100%" }}
-                    src={`${process.env.PUBLIC_URL}/assets/sponser-logo/Shahrtash-Studio.png`}
-                    alt=""
-                  />
-                </a>
-              </div>
-            </div>
+            {sponsers.map((sponser) => (
+              <SponsorCard
+                imageUrl={`${process.env.PUBLIC_URL}/${sponser.imageUrl}`}
+                href={sponser.href}
+                key={sponser.id}
+              />
+            ))}
           </Slider>
         </div>
       </div>

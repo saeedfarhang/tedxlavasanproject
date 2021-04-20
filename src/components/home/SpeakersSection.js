@@ -6,7 +6,7 @@ import Typography from "../../elements/Typography";
 import PopUpDialog from "../PopUpDialog";
 import SpeakerCard from "../SpeakerCard";
 import { LazyLoadImage } from "react-lazy-load-image-component";
-import { speakersData } from "../../data/speakers";
+import axios from "axios";
 //
 
 const Container = styled.div`
@@ -66,7 +66,8 @@ export default function SpeackersSection(props) {
   const reff = useRef();
 
   useEffect(() => {
-    setSpeakers(speakersData);
+    // setSpeakers(speakersData);
+    axios.get("data/speakers.json").then((res) => setSpeakers(res.data));
   }, []);
 
   return (
@@ -105,7 +106,7 @@ export default function SpeackersSection(props) {
             <SpeakerCard
               key={speaker.id}
               id={speaker.id}
-              imageUrl={speaker.imageUrl}
+              imageUrl={`${process.env.PUBLIC_URL}/${speaker.imageUrl}`}
               redxDir={speaker.redxDir}
               RedxMarginRight={speaker.RedxMarginRight}
               title={speaker.title}
