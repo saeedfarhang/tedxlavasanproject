@@ -18,6 +18,11 @@ const Container = styled.div`
     min-height: ${(props) => (props.open ? "85px" : "95px")};
     margin: ${(props) => (props.open ? "30px 15vw" : "25px 14.5vw")};
     padding: ${(props) => (props.open ? "30px" : "32px")};
+    @media screen and (max-width: 555px) {
+      min-height: 95px;
+      margin: 30px 20px;
+      padding: 20px;
+    }
   }
 
   .close-content {

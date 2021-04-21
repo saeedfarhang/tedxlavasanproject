@@ -7,28 +7,32 @@ import SignUp from "./pages/SignUp";
 import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./pages/Speakers";
 import SponserDetail from "./pages/SponserDetail";
+import Sponsers from "./pages/Sponsers";
 
 export default function Routing(props) {
   return (
     <Router basename={process.env.PUBLIC_URL}>
       <Switch>
-        <Route exact path="/" component={Home}>
-          {/* <Home /> */}
+        <Route exact path="/">
+          <Home />
         </Route>
-        <Route exact path="/faq" component={Faq}>
-          {/* <Faq /> */}
+        <Route exact path="/faq">
+          <Faq />
         </Route>
-        <Route exact path="/how" component={HowSignup}>
-          {/* <HowSignup /> */}
+        <Route exact path="/how">
+          <HowSignup />
         </Route>
-        <Route exact path="/speakers" component={Speakers}>
-          {/* <Speakers /> */}
+        <Route exact path="/speakers">
+          <Speakers />
         </Route>
-        <Route exact path="/signup" component={SignUp}>
-          {/* <SignUp /> */}
+        <Route exact path="/sponsors">
+          <Sponsers />
+        </Route>
+        <Route exact path="/signup">
+          <SignUp />
         </Route>
         <Route exact path="/speakers/:id" component={SpeakerDetail}></Route>
-        <Route exact path="/sponsers/:id" component={SponserDetail}></Route>
+        <Route exact path="/sponsors/:id" component={SponserDetail}></Route>
       </Switch>
     </Router>
   );

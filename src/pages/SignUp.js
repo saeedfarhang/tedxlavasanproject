@@ -10,6 +10,10 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      gap: 20px;
+    }
     .su-texts {
     }
     .evand-widget-event-registration {
@@ -37,6 +41,7 @@ const Container = styled.div`
       display: flex;
       justify-content: space-between;
       align-items: center;
+
       ::after {
         display: none;
       }
@@ -91,7 +96,7 @@ export default function SignUp(props) {
             textAlign="right"
             fontWeight="300"
           >
-            رویداد ۲۰ فروردین ۱۴۰۰
+            ٣١ اردیبهشت ١٤٠٠
           </Typography>
         </div>
         <div

@@ -32,14 +32,18 @@ const Container = styled.div`
       width: 200px;
       height: 253px;
       margin-left: 30px;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       @media screen and (max-width: 600px) {
         width: 120px;
         height: 150px;
       }
       img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        width: 90%;
+        height: 90%;
+        object-fit: contain;
       }
     }
     .detail {

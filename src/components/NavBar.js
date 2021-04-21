@@ -189,11 +189,11 @@ export default function NavBar(props) {
               سخنرانان
             </Button>
           </Link>
-          <HashLink smooth to="/#tedandtedx">
+          <Link to="/sponsors" id="sponsors">
             <Button className="nav-btn" id="sponsers" variant="clear">
               حامیان
             </Button>
-          </HashLink>
+          </Link>
           <Link style={{ margin: "auto 0 0 0" }} to="/signup">
             <Button margin="20px" variant="fill">
               خرید بلیط
@@ -222,11 +222,11 @@ export default function NavBar(props) {
             سخنرانان
           </Button>
         </Link>
-        <HashLink smooth to="/#tedandtedx">
+        <Link to="/sponsors" id="sponsors">
           <Button className="nav-btn" id="sponsers" variant="clear">
             حامیان
           </Button>
-        </HashLink>
+        </Link>
       </NavLinks>
       <HashLink smooth to="/#">
         <NavLogo src={`${process.env.PUBLIC_URL}/assets/tedx-logo.svg`} />

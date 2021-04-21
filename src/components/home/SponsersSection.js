@@ -137,6 +137,7 @@ export default function SponsersSection(props) {
                 imageUrl={`${process.env.PUBLIC_URL}/${sponser.imageUrl}`}
                 href={sponser.href}
                 key={sponser.id}
+                id={sponser.id}
               />
             ))}
           </Slider>
