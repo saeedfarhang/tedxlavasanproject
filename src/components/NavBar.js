@@ -169,6 +169,11 @@ export default function NavBar(props) {
         </div>
         <NavMenu open={menuOpen} scrollTop={scrollTop}>
           <div style={{ height: 30 }}></div>
+          <Link to="/">
+            <Button className="nav-btn" variant="clear">
+              صفحه اصلی
+            </Button>
+          </Link>
           <Link to="/faq">
             <Button className="nav-btn" id="faq" variant="clear">
               سوالات متداول

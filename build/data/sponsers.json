@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/honaralmas.png",
+    "title": "هنر الماس",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  {
+    "id": 2,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/kaarmaan.png",
+    "title": "",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  {
+    "id": 3,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/Shahrtash-Studio.png",
+    "title": "",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  {
+    "id": 4,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/irancell.png",
+    "title": "",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  {
+    "id": 5,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/gallardo.png",
+    "title": "",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  },
+  {
+    "id": 6,
+    "href": "",
+    "imageUrl": "assets/sponser-logo/icoffee.png",
+    "title": "",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
+  }
+]
