@@ -55,6 +55,7 @@ export default function SpeakerCard(props) {
             height: "260px",
             position: "relative",
             overflow: "hidden",
+            willChange: "opacity",
           }}
         >
           <LazyLoadImage
@@ -64,7 +65,7 @@ export default function SpeakerCard(props) {
               objectFit: "cover",
               filter: "grayscale(1)",
               position: "absolute",
-              zIndex: -1,
+              zIndex: "-1",
               border: "solid 1px #B2B2B220",
             }}
             src={props.imageUrl}
