@@ -13,7 +13,7 @@
   {
     "id": 2,
     "imageUrl": "assets/sponser-logo/kaarmaan.png",
-    "title": "",
+    "title": "کارمان",
     "telegram": "",
     "web": "",
     "facebook": "",
@@ -24,7 +24,7 @@
   {
     "id": 3,
     "imageUrl": "assets/sponser-logo/Shahrtash-Studio.png",
-    "title": "",
+    "title": "استدیو شهرتاش",
     "telegram": "",
     "web": "",
     "facebook": "",
@@ -35,7 +35,7 @@
   {
     "id": 4,
     "imageUrl": "assets/sponser-logo/irancell.png",
-    "title": "",
+    "title": "ایرانسل",
     "telegram": "",
     "web": "",
     "facebook": "",
@@ -46,7 +46,7 @@
   {
     "id": 5,
     "imageUrl": "assets/sponser-logo/gallardo.png",
-    "title": "",
+    "title": "گالاردو",
     "telegram": "",
     "web": "",
     "facebook": "",
@@ -57,7 +57,7 @@
   {
     "id": 6,
     "imageUrl": "assets/sponser-logo/icoffee.png",
-    "title": "",
+    "title": "ای کافی",
     "telegram": "",
     "web": "",
     "facebook": "",
