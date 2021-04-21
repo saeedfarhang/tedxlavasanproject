@@ -194,7 +194,7 @@ export default function NavBar(props) {
               حامیان
             </Button>
           </Link>
-          <Link style={{ margin: "auto 0 0 0" }} to="/signup">
+          <Link style={{ margin: "auto 0 40px 0" }} to="/signup">
             <Button margin="20px" variant="fill">
               خرید بلیط
             </Button>

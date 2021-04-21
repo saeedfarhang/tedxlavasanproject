@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import SponsersSection from "../components/home/SponsersSection";
 import NavBar from "../components/NavBar";
 import Typography from "../elements/Typography";
 
@@ -59,6 +60,9 @@ const Container = styled.div`
       }
     }
   }
+  .space {
+    height: 200px;
+  }
 `;
 
 export default function SignUp(props) {
@@ -105,6 +109,8 @@ export default function SignUp(props) {
           data-setting=""
         ></div>
       </div>
+      <SponsersSection />
+      <div className="space"></div>
     </Container>
   );
 }

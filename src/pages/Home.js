@@ -11,7 +11,11 @@ import VolenteersSection from "../components/home/VolenteersSection";
 import NavBar from "../components/NavBar";
 import "./styles.css";
 
-const HomeContainer = styled.div``;
+const HomeContainer = styled.div`
+  .space {
+    height: 100px;
+  }
+`;
 
 export default function Home() {
   const speakerRef = useRef();
@@ -33,11 +37,12 @@ export default function Home() {
       <div id="about"></div>
       <AboutSection />
       <div id="volenteers"></div>
-      <VolenteersSection />
+      <SponsersSection />
+      <div className="space"></div>
       <AboutLavasanSection />
       <div id="tedandtedx"></div>
       <AboutTEDSection />
-      <SponsersSection />
+      <VolenteersSection />
       <FooterSection />
     </HomeContainer>
   );

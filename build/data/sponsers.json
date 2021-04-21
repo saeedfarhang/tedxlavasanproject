@@ -1,7 +1,6 @@
 [
   {
     "id": 1,
-    "href": "",
     "imageUrl": "assets/sponser-logo/honaralmas.png",
     "title": "هنر الماس",
     "telegram": "",
@@ -13,7 +12,6 @@
   },
   {
     "id": 2,
-    "href": "",
     "imageUrl": "assets/sponser-logo/kaarmaan.png",
     "title": "",
     "telegram": "",
@@ -25,7 +23,6 @@
   },
   {
     "id": 3,
-    "href": "",
     "imageUrl": "assets/sponser-logo/Shahrtash-Studio.png",
     "title": "",
     "telegram": "",
@@ -37,7 +34,6 @@
   },
   {
     "id": 4,
-    "href": "",
     "imageUrl": "assets/sponser-logo/irancell.png",
     "title": "",
     "telegram": "",
@@ -49,7 +45,6 @@
   },
   {
     "id": 5,
-    "href": "",
     "imageUrl": "assets/sponser-logo/gallardo.png",
     "title": "",
     "telegram": "",
@@ -61,7 +56,6 @@
   },
   {
     "id": 6,
-    "href": "",
     "imageUrl": "assets/sponser-logo/icoffee.png",
     "title": "",
     "telegram": "",
