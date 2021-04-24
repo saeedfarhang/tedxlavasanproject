@@ -112,8 +112,8 @@
   {
     "id": 10,
     "title": "مهرداد اسکویی",
-    "redxDir": "left",
-    "RedxMarginRight": "20px",
+    "redxDir": "right",
+    "RedxMarginRight": "120px",
     "desc": "گفتگو",
     "telegram": "",
     "web": "",
