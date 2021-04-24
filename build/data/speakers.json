@@ -111,16 +111,16 @@
   },
   {
     "id": 10,
-    "title": "محمد رضا جلالی پور",
+    "title": "مهرداد اسکویی",
     "redxDir": "left",
     "RedxMarginRight": "20px",
-    "desc": "سخنران",
+    "desc": "گفتگو",
     "telegram": "",
     "web": "",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
-    "instagram": "",
-    "imageUrl": "assets/speakers-img/jalaeipour.jfif"
+    "instagram": "https://www.instagram.com/mehrdad.oskouei_official/",
+    "imageUrl": "assets/speakers-img/mehrdadoskuie.jpg"
   }
 ]
