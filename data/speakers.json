@@ -122,5 +122,33 @@
     "linkedin": "",
     "instagram": "https://www.instagram.com/mehrdad.oskouei_official/",
     "imageUrl": "assets/speakers-img/mehrdadoskuie.jpg"
+  },
+  {
+    "id": 11,
+    "title": "محمدرضا جلائی پور",
+    "redxDir": "left",
+    "RedxMarginRight": "20px",
+    "desc": "گفتگو",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": "",
+    "imageUrl": "assets/speakers-img/jalaeipour.jfif"
+  },
+  {
+    "id": 12,
+    "title": "شارمین میمندی نژاد",
+    "redxDir": "right",
+    "RedxMarginRight": "120px",
+    "desc": "گفتگو",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": "",
+    "imageUrl": "assets/speakers-img/meymandinejad.jpeg"
   }
 ]
