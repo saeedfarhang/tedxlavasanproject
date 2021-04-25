@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import NavBar from "../components/NavBar";
 import Button from "../elements/Button";
@@ -44,7 +45,9 @@ export default function Faq(props) {
           ثبت نام آن برای خریداران واقعی فراهم شود.
         </Typography>
         <div style={{ height: "20px" }} />
-        <Button variant="fill">ثبت نام کنید</Button>
+        <Link to="/signup">
+          <Button variant="fill">ثبت نام کنید</Button>
+        </Link>
       </Expand>
       <Expand title="چه‌طور می‌شه در یکی از رویدادها به عنوان سخنران شرکت کرد؟">
         <Typography fontWeight="100" lineHeight="22px" fontSize="14px">
