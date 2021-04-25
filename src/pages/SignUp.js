@@ -35,6 +35,9 @@ const Container = styled.div`
         .event-ticket:first-child {
           border-bottom: solid 1px #e62b1e;
         }
+        .event-ticket:nth-child(2) {
+          border-bottom: solid 1px #e62b1e;
+        }
       }
     }
     .evand-panel-footer {

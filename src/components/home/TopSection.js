@@ -51,7 +51,7 @@ export default function TopSection(props) {
               fontWeight="300"
               fontSize="16px"
             >
-              فروش بلیط از ابتدای ادریبهشت آغاز خواهد شد
+              ثبت نام آغاز شد!
             </Typography>
           </>
         ) : (
@@ -67,7 +67,7 @@ export default function TopSection(props) {
               fontWeight="300"
               fontSize="20px"
             >
-              فروش بلیط از ابتدای اردیبهشت آغاز خواهد شد
+              ثبت نام آغاز شد!
             </Typography>
           </>
         )}
