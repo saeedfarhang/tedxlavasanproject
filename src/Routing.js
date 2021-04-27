@@ -8,6 +8,7 @@ import SpeakerDetail from "./pages/SpeakerDetail";
 import Speakers from "./pages/Speakers";
 import SponserDetail from "./pages/SponserDetail";
 import Sponsers from "./pages/Sponsers";
+import WorkShop from "./pages/WorkShop";
 
 export default function Routing(props) {
   return (
@@ -21,6 +22,9 @@ export default function Routing(props) {
         </Route>
         <Route exact path="/how">
           <HowSignup />
+        </Route>
+        <Route exact path="/workshop">
+          <WorkShop />
         </Route>
         <Route exact path="/speakers">
           <Speakers />

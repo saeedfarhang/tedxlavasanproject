@@ -39,7 +39,7 @@ const NavLinks = styled.div`
   }
   justify-content: center;
   display: none;
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 1000px) {
     display: flex;
   }
 `;
@@ -53,7 +53,7 @@ const HambMenu = styled.div`
   position: relative;
   width: 40px;
   height: 40px;
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 1000px) {
     display: none;
   }
   @media screen and (max-width: 600px) {
@@ -108,7 +108,7 @@ const NavMenu = styled.div`
   top: 120%;
   right: 0;
   border-radius: 25px;
-  @media screen and (min-width: 850px) {
+  @media screen and (min-width: 1000px) {
     display: none;
   }
 
@@ -194,6 +194,11 @@ export default function NavBar(props) {
               حامیان
             </Button>
           </Link>
+          <Link to="/workshop" id="workshop">
+            <Button className="nav-btn" id="workshop" variant="clear">
+              معرفی کارگاه
+            </Button>
+          </Link>
           <Link style={{ margin: "auto 0 40px 0" }} to="/signup">
             <Button margin="20px" variant="fill">
               خرید بلیط
@@ -225,6 +230,11 @@ export default function NavBar(props) {
         <Link to="/sponsors" id="sponsors">
           <Button className="nav-btn" id="sponsers" variant="clear">
             حامیان
+          </Button>
+        </Link>
+        <Link to="/workshop" id="workshop">
+          <Button className="nav-btn" id="workshop" variant="clear">
+            معرفی کارگاه
           </Button>
         </Link>
       </NavLinks>
