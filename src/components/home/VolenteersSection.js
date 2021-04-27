@@ -167,6 +167,12 @@ export default function VolenteersSection(props) {
             desc=""
             instagram="https://instagram.com/ali.rostami.1980"
           />
+          <VolenteerCard
+            imageUrl={`${process.env.PUBLIC_URL}/assets/volenteer-img/rohani.jpg`}
+            title="نیوشا روحانی امیری"
+            desc=""
+            instagram="https://instagram.com/niushaamirii"
+          />
         </Grid>
       </div>
       <div className="miss_volenteer miss-form">
