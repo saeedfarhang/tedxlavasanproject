@@ -78,7 +78,7 @@
     "twitter": "",
     "linkedin": "",
     "instagram": "https://www.instagram.com/hediye_molaei/",
-    "imageUrl": "assets/speakers-img/"
+    "imageUrl": "assets/speakers-img/molaei.jpg"
   },
   {
     "id": 7,
@@ -111,6 +111,20 @@
   },
   {
     "id": 10,
+    "title": "مصطفی ملکیان",
+    "redxDir": "right",
+    "RedxMarginRight": "100px",
+    "desc": "سخنران",
+    "telegram": "",
+    "web": "",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": "https://instagram.com/mostafamalekian_official",
+    "imageUrl": "assets/speakers-img/malekian.jpg"
+  },
+  {
+    "id": 11,
     "title": "مهرداد اسکویی",
     "redxDir": "right",
     "RedxMarginRight": "120px",
@@ -124,7 +138,7 @@
     "imageUrl": "assets/speakers-img/mehrdadoskuie.jpg"
   },
   {
-    "id": 11,
+    "id": 12,
     "title": "محمدرضا جلائی پور",
     "redxDir": "left",
     "RedxMarginRight": "20px",
@@ -138,7 +152,7 @@
     "imageUrl": "assets/speakers-img/jalaeipour.jfif"
   },
   {
-    "id": 12,
+    "id": 13,
     "title": "شارمین میمندی نژاد",
     "redxDir": "right",
     "RedxMarginRight": "120px",
