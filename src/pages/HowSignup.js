@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
 import FooterSection from "../components/home/FooterSection";
 import NavBar from "../components/NavBar";
