@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Container = styled.div`
   position: relative;
   max-width: 760px;
-  width: 90vw;
+  width: 30vw;
   height: 100%;
   border: 1px solid #e62b1e;
   margin-top: 40px;
@@ -14,7 +14,7 @@ const Container = styled.div`
   :hover {
     margin-top: 36px;
     max-width: 780px;
-    width: 92vw;
+    width: 31vw;
     height: 100%;
   }
   .b-img {

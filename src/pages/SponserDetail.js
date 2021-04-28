@@ -66,6 +66,9 @@ const SocialLinks = styled.div`
   margin: 20px -12px -10px 0;
 `;
 export default function SponserDetail(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   let { id } = useParams();
   const [sponser, setSponser] = useState({});
   useEffect(() => {

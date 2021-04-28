@@ -232,11 +232,11 @@ export default function NavBar(props) {
             حامیان
           </Button>
         </Link>
-        <Link to="/workshop" id="workshop">
+        <HashLink to="/workshop" id="workshop">
           <Button className="nav-btn" id="workshop" variant="clear">
             معرفی کارگاه
           </Button>
-        </Link>
+        </HashLink>
       </NavLinks>
       <HashLink smooth to="/#">
         <NavLogo src={`${process.env.PUBLIC_URL}/assets/tedx-logo.svg`} />

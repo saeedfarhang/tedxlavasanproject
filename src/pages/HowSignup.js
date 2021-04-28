@@ -1,5 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { useEffect } from "react/cjs/react.development";
 import styled from "styled-components";
+import FooterSection from "../components/home/FooterSection";
 import NavBar from "../components/NavBar";
 import Button from "../elements/Button";
 import Typography from "../elements/Typography";
@@ -16,11 +19,15 @@ const HowSignContainer = styled.div`
     display: flex;
     justify-content: center;
   }
-  .content {
+  .pg-content {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    a {
+      color: #e62b1e;
+      text-decoration: underline;
+    }
     .text {
       max-width: 760px;
       width: 90vw;
@@ -30,6 +37,9 @@ const HowSignContainer = styled.div`
 `;
 
 export default function HowSignup() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <HowSignContainer>
       <NavBar activateLink={"howSign"} />
@@ -39,7 +49,7 @@ export default function HowSignup() {
           چگونه در تدکس لواسان شرکت کنم؟
         </Typography>
       </div>
-      <div className="content">
+      <div className="pg-content">
         <VideoPlayer />
         <div className="text">
           <Typography
@@ -61,9 +71,9 @@ export default function HowSignup() {
             رویداد تدکس لواسان در روز ۳۱‌ام اردیبهشت‌ ماه ۱۴۰۰ از ساعت ۹ صبح
             به‌صورت زنده و آنلاین برگزار خواهد شد و از روی سایت و اپلیکیشن لنز
             قابل مشاهده است. رویداد، سه نوع بلیط دارد: «بلیط عادی»، «بلیط رویداد
-            + کارگاه» و «بلیط حمایتی». (برای آشنایی با کارگاه تسهیل گری روابط به
-            این لینک مراجعه کنید.) برای ثبت‌نام در رویداد و خرید بلیط، مراحل زیر
-            را طی کنید:
+            + کارگاه» و «بلیط حمایتی». (برای آشنایی با کارگاه تسهیل گری روابط به{" "}
+            <a href="/#/workshop">این لینک</a> مراجعه کنید.) برای ثبت‌نام در
+            رویداد و خرید بلیط، مراحل زیر را طی کنید:
             <br />
             1. از طریق سایت تدکس لواسان (tedxlavasan.com)، گزینه‌ی خرید بلیط را
             انتخاب کنید.
@@ -102,10 +112,13 @@ export default function HowSignup() {
             تماس باشید.
           </Typography>
         </div>
-        <Button margin={"40px 0 60px 0"} variant="fill">
-          ثبت نام کنید
-        </Button>
+        <Link to="/signup">
+          <Button margin={"40px 0 60px 0"} variant="fill">
+            ثبت نام کنید
+          </Button>
+        </Link>
       </div>
+      <FooterSection />
     </HowSignContainer>
   );
 }

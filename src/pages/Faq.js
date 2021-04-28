@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import FooterSection from "../components/home/FooterSection";
 import NavBar from "../components/NavBar";
 import Button from "../elements/Button";
 import Expand from "../elements/Expand";
@@ -21,6 +22,9 @@ const FAQContainer = styled.div`
 `;
 
 export default function Faq(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <FAQContainer>
       <NavBar activateLink={"faq"} />
@@ -32,17 +36,9 @@ export default function Faq(props) {
       </div>
       <Expand title="چگونه باید برای تدکس لواسان بلیط تهیه کنم؟">
         <Typography fontWeight="100" lineHeight="22px" fontSize="14px">
-          در پکیج اختصاصی ممتازخودرو به صورت فیلم آموزشی صفر تا صد تمامی مهارت
-          ها و ترفندهای لازم برای تکمیل فرم ثبت نام اینترنتی در سایت ایران خودرو
-          و رفع خطاهای احتمالی که به علت ترافیک بالای سایت در هنگام ثبت نام پیش
-          می آید برای رسیدن به درگاه بانکی در سریع ترین زمان ممکن آموزش داده می
-          شود. توجه داشته باشید
-          <br />
-          <br /> همانطور که در فیلمهای آموزشی مشاهده خواهید کرد ما صرفا برای
-          ارائه آموزش عملی نحوه ثبت نام و به منظور مشاهده کاربر اقدام به ثبت نام
-          میکنیم و پس ورود به درگاه بدون اینکه پرداخت کنیم انصراف میزنیم تا به
-          منظور رسیدن خودرو ها به مصرف کننده واقعی مجدد خودرو آزاد شده و امکان
-          ثبت نام آن برای خریداران واقعی فراهم شود.
+          برای مشاهده رویداد تدکس لواسان، ابتدا باید ثبت نام کنید. روز قبل از
+          رویداد، به شما ایمیلی ارسال می شود که شامل نام کاربری، رمز عبور و آدرس
+          اختصاصی شما برای مشاهده رویداد روی وب سایت و اپلیکشن لنز است.
         </Typography>
         <div style={{ height: "20px" }} />
         <Link to="/signup">
@@ -206,6 +202,7 @@ export default function Faq(props) {
           :)
         </Typography>
       </Expand>
+      <FooterSection />
     </FAQContainer>
   );
 }

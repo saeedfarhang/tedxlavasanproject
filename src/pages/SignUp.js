@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
+import FooterSection from "../components/home/FooterSection";
 import SponsersSection from "../components/home/SponsersSection";
 import NavBar from "../components/NavBar";
 import Typography from "../elements/Typography";
@@ -63,12 +64,20 @@ const Container = styled.div`
       }
     }
   }
+  .evand-modal-close {
+    top: 100px !important;
+  }
+  /* .evand-modal-close { */
+  /* } */
   .space {
     height: 200px;
   }
 `;
 
 export default function SignUp(props) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   useEffect(() => {
     var t = document.createElement("script");
     t.type = "text/javascript";
@@ -114,6 +123,7 @@ export default function SignUp(props) {
       </div>
       <SponsersSection />
       <div className="space"></div>
+      <FooterSection />
     </Container>
   );
 }

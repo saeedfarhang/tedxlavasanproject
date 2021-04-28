@@ -131,4 +131,15 @@
 .miss_sponser {
   margin-top: 30px;
 }
+
+.evand-modal-close {
+  top: 10% !important;
+  left: 10% !important;
+  font-size: 34px !important;
+  color: #e62b1e !important;
+}
+iframe {
+  max-height: 80vh;
+  margin-top: 10% !important;
+}
 /*# sourceMappingURL=styles.css.map */

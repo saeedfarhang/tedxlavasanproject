@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import FooterSection from "../components/home/FooterSection";
 import NavBar from "../components/NavBar";
 import SponsorCard from "../elements/SponsorCard";
 import Typography from "../elements/Typography";
@@ -53,6 +54,7 @@ export default function Sponsers() {
           />
         ))}
       </div>
+      <FooterSection />
     </Container>
   );
 }
