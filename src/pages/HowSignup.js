@@ -24,7 +24,7 @@ const HowSignContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    a {
+    .ws-clink {
       color: #e62b1e;
       text-decoration: underline;
     }
@@ -72,8 +72,11 @@ export default function HowSignup() {
             به‌صورت زنده و آنلاین برگزار خواهد شد و از روی سایت و اپلیکیشن لنز
             قابل مشاهده است. رویداد، سه نوع بلیط دارد: «بلیط عادی»، «بلیط رویداد
             + کارگاه» و «بلیط حمایتی». (برای آشنایی با کارگاه تسهیل گری روابط به{" "}
-            <a href="/#/workshop">این لینک</a> مراجعه کنید.) برای ثبت‌نام در
-            رویداد و خرید بلیط، مراحل زیر را طی کنید:
+            <a className="ws-clink" href="/#/workshop">
+              این لینک
+            </a>{" "}
+            مراجعه کنید.) برای ثبت‌نام در رویداد و خرید بلیط، مراحل زیر را طی
+            کنید:
             <br />
             1. از طریق سایت تدکس لواسان (tedxlavasan.com)، گزینه‌ی خرید بلیط را
             انتخاب کنید.

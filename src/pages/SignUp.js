@@ -64,11 +64,7 @@ const Container = styled.div`
       }
     }
   }
-  .evand-modal-close {
-    top: 100px !important;
-  }
-  /* .evand-modal-close { */
-  /* } */
+
   .space {
     height: 200px;
   }
