@@ -48,7 +48,8 @@ export default function Sponsers() {
         {sponsors.map((sponsor) => (
           <SponsorCard
             imageUrl={`${process.env.PUBLIC_URL}/${sponsor.imageUrl}`}
-            href={sponsor.href}
+            web={sponsor.web}
+            selfPage={sponsor.selfPage ? sponsor.selfPage : false}
             key={sponsor.id}
             id={sponsor.id}
           />

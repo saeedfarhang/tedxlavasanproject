@@ -33,9 +33,15 @@ export default function SponsorCard(props) {
   return (
     <Container>
       <div className="s-logo">
-        <Link to={`/sponsors/${props.id}`}>
-          <img style={{ height: "100%" }} src={props.imageUrl} alt="" />
-        </Link>
+        {props.selfPage === true ? (
+          <Link to={`/sponsors/${props.id}`}>
+            <img style={{ height: "100%" }} src={props.imageUrl} alt="" />
+          </Link>
+        ) : (
+          <a href={props.web} target="_blank">
+            <img style={{ height: "100%" }} src={props.imageUrl} alt="dsfasd" />
+          </a>
+        )}
       </div>
       <div className="s-title">
         <Typography as="p" fontSize="13px" fontWeight="100">

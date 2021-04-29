@@ -135,7 +135,8 @@ export default function SponsersSection(props) {
             {sponsers.map((sponser) => (
               <SponsorCard
                 imageUrl={`${process.env.PUBLIC_URL}/${sponser.imageUrl}`}
-                href={sponser.href}
+                web={sponser.web}
+                selfPage={sponser.selfPage ? sponser.selfPage : false}
                 key={sponser.id}
                 id={sponser.id}
               />
