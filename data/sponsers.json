@@ -4,7 +4,7 @@
     "imageUrl": "assets/sponser-logo/honaralmas.png",
     "title": "هنر الماس",
     "telegram": "",
-    "web": "",
+    "web": "http://redidea.ir/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
@@ -15,7 +15,7 @@
     "imageUrl": "assets/sponser-logo/kaarmaan.png",
     "title": "کارمان",
     "telegram": "",
-    "web": "",
+    "web": "https://kaarmaan.house/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
@@ -26,7 +26,7 @@
     "imageUrl": "assets/sponser-logo/Shahrtash-Studio.png",
     "title": "استدیو شهرتاش",
     "telegram": "",
-    "web": "",
+    "web": "https://www.shahrtash.com/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
@@ -37,11 +37,12 @@
     "imageUrl": "assets/sponser-logo/irancell.png",
     "title": "ایرانسل",
     "telegram": "",
-    "web": "",
+    "web": "https://irancell.ir/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
-    "instagram": ""
+    "instagram": "",
+    "selfPage": true
   },
   {
     "id": 5,
@@ -59,7 +60,7 @@
     "imageUrl": "assets/sponser-logo/icoffee.png",
     "title": "ای کافی",
     "telegram": "",
-    "web": "",
+    "web": "https://icoff.ee/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
@@ -70,10 +71,11 @@
     "imageUrl": "assets/sponser-logo/digikala.png",
     "title": "دیجیکالا",
     "telegram": "",
-    "web": "",
+    "web": "https://www.digikala.com/",
     "facebook": "",
     "twitter": "",
     "linkedin": "",
-    "instagram": ""
+    "instagram": "",
+    "selfPage": true
   }
 ]
