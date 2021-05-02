@@ -42,7 +42,8 @@
     "twitter": "",
     "linkedin": "",
     "instagram": "",
-    "selfPage": true
+    "selfPage": true,
+    "bigSize": true
   },
   {
     "id": 5,
@@ -76,6 +77,7 @@
     "twitter": "",
     "linkedin": "",
     "instagram": "",
-    "selfPage": true
+    "selfPage": true,
+    "bigSize": true
   }
 ]

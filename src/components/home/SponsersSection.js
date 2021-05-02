@@ -17,10 +17,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
+  .sponsor-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+  }
   .sponsers-container {
     width: 100%;
     position: relative;
-    .over {
+    /* .over {
       z-index: 100;
       pointer-events: none;
       width: 100%;
@@ -59,11 +65,17 @@ const Container = styled.div`
           linear-gradient(90deg, #00000000 0%, #000000 100%) 0% 0% no-repeat
           padding-box;
         opacity: 0.8;
-      }
-    }
+      } */
+
     .sponsers {
-      width: 90%;
+      width: fit-content;
       margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      @media screen and (max-width: 620px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      justify-items: center;
       .slick-list {
         outline: none;
         direction: ltr;
@@ -116,14 +128,45 @@ export default function SponsersSection(props) {
       >
         حامیان تدکس لواسان
       </Typography>
-
+      <div className="sponsor-grid">
+        <SponsorCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/irancell.png`}
+          web={"https://irancell.ir/"}
+          selfPage
+          key={4}
+          id={4}
+          bigSize
+        />
+        <div className="space-sponsors-big" style={{ width: "3%" }}></div>
+        <SponsorCard
+          imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/digikala.png`}
+          web={"https://digikala.com/"}
+          selfPage
+          key={7}
+          id={7}
+          bigSize
+        />
+      </div>
       <div className="sponsers-container">
-        <div className="over">
+        {/* <div className="over">
           <div className="left"></div>
           <div className="right"></div>
-        </div>
+        </div> */}
+
         <div className="sponsers" ref={logosRef}>
-          <Slider
+          {sponsers.map(
+            (sponser) =>
+              !sponser.bigSize && (
+                <SponsorCard
+                  imageUrl={`${process.env.PUBLIC_URL}/${sponser.imageUrl}`}
+                  web={sponser.web}
+                  selfPage={sponser.selfPage ? sponser.selfPage : false}
+                  key={sponser.id}
+                  id={sponser.id}
+                />
+              )
+          )}
+          {/* <Slider
             responsive={responsive}
             adaptiveHeight
             arrows={false}
@@ -141,7 +184,7 @@ export default function SponsersSection(props) {
                 id={sponser.id}
               />
             ))}
-          </Slider>
+          </Slider> */}
         </div>
       </div>
       <div className="miss_sponser miss-form">
