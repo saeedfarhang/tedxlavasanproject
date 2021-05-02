@@ -148,11 +148,6 @@ export default function SponsersSection(props) {
         />
       </div>
       <div className="sponsers-container">
-        {/* <div className="over">
-          <div className="left"></div>
-          <div className="right"></div>
-        </div> */}
-
         <div className="sponsers" ref={logosRef}>
           {sponsers.map(
             (sponser) =>
@@ -166,25 +161,6 @@ export default function SponsersSection(props) {
                 />
               )
           )}
-          {/* <Slider
-            responsive={responsive}
-            adaptiveHeight
-            arrows={false}
-            infinite
-            autoplay={true}
-            autoplaySpeed={1000}
-            pauseOnHover={true}
-          >
-            {sponsers.map((sponser) => (
-              <SponsorCard
-                imageUrl={`${process.env.PUBLIC_URL}/${sponser.imageUrl}`}
-                web={sponser.web}
-                selfPage={sponser.selfPage ? sponser.selfPage : false}
-                key={sponser.id}
-                id={sponser.id}
-              />
-            ))}
-          </Slider> */}
         </div>
       </div>
       <div className="miss_sponser miss-form">
