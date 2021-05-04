@@ -32,6 +32,7 @@ const Container = styled.div`
       width: 200px;
       height: 253px;
       margin-left: 30px;
+
       @media screen and (max-width: 600px) {
         width: 120px;
         height: 150px;
@@ -47,6 +48,14 @@ const Container = styled.div`
       flex-direction: column;
     }
   }
+  .texts {
+    width: 100%;
+    padding: 0 10vw;
+    margin-bottom: 100px;
+    @media screen and (max-width: 600px) {
+      padding: 0 5vw;
+    }
+  }
 `;
 const SocialLinks = styled.div`
   display: flex;
@@ -55,7 +64,7 @@ const SocialLinks = styled.div`
 `;
 export default function SpeakerDetail(props) {
   let { id } = useParams();
-  const [speaker, setSpeaker] = useState({});
+  const [speaker, setSpeaker] = useState({ text: [] });
   useEffect(() => {
     // setSpeaker(speakersData.find((speaker) => speaker.id == id));
     axios
@@ -93,7 +102,19 @@ export default function SpeakerDetail(props) {
           </SocialLinks>
         </div>
       </div>
-      <div className="texts"></div>
+      <div className="texts">
+        <Typography
+          as="p"
+          textAlign="right"
+          fontWeight="100"
+          fontSize="16px"
+          lineHeight="40px"
+        >
+          {speaker.text.map((line) => (
+            <p>{line}</p>
+          ))}
+        </Typography>
+      </div>
     </Container>
   );
 }

@@ -32,7 +32,7 @@ const Container = styled.div`
       width: 200px;
       height: 253px;
       margin-left: 30px;
-      background-color: #000;
+      background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -59,6 +59,14 @@ const Container = styled.div`
     height: 31px;
     background-color: #e62b1e20;
   }
+  .texts {
+    width: 100%;
+    padding: 0 10vw;
+    margin-bottom: 100px;
+    @media screen and (max-width: 600px) {
+      padding: 0 5vw;
+    }
+  }
 `;
 const SocialLinks = styled.div`
   display: flex;
@@ -70,7 +78,7 @@ export default function SponserDetail(props) {
     window.scrollTo(0, 0);
   }, []);
   let { id } = useParams();
-  const [sponser, setSponser] = useState({});
+  const [sponser, setSponser] = useState({ text: [] });
   useEffect(() => {
     // setSpeaker(speakersData.find((speaker) => speaker.id == id));
     axios
@@ -110,7 +118,17 @@ export default function SponserDetail(props) {
           </SocialLinks>
         </div>
       </div>
-      <div className="texts"></div>
+      <div className="texts">
+        <Typography
+          as="p"
+          textAlign="right"
+          fontWeight="100"
+          fontSize="16px"
+          lineHeight="40px"
+        >
+          {sponser.text && sponser.text.map((line) => <p>{line}</p>)}
+        </Typography>
+      </div>
     </Container>
   );
 }
