@@ -140,11 +140,15 @@ export default function WorkShop() {
             Community)، قرار و آرامشی پایدار و برقرار را برایتان آرزومندیم.
           </Typography>
         </div>
-        <Link to="/signup">
+        <a
+          target="_blank"
+          // ref="noreferrer"
+          href="https://evand.com/events/wronglove"
+        >
           <Button margin={"40px 0 60px 0"} variant="fill">
             ثبت نام کنید
           </Button>
-        </Link>
+        </a>
       </div>
       <FooterSection />
     </WorkShopContainer>
