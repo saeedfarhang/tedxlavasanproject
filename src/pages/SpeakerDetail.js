@@ -47,6 +47,11 @@ const Container = styled.div`
       flex-direction: column;
     }
   }
+  .texts {
+    width: 100%;
+    padding: 0 10vw;
+    margin-bottom: 100px;
+  }
 `;
 const SocialLinks = styled.div`
   display: flex;
@@ -93,7 +98,19 @@ export default function SpeakerDetail(props) {
           </SocialLinks>
         </div>
       </div>
-      <div className="texts"></div>
+      <div className="texts">
+        {speaker.text &&
+          speaker.text.map((paragh) => (
+            <Typography
+              as="p"
+              textAlign="right"
+              fontSize="16px"
+              fontWeight="100"
+            >
+              {paragh}
+            </Typography>
+          ))}
+      </div>
     </Container>
   );
 }
