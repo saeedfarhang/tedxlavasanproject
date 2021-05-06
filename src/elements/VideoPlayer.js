@@ -51,9 +51,7 @@ export default function VideoPlayer(props) {
       <img
         className="b-img"
         src={
-          props.imgUrl
-            ? props.imgUrl
-            : `${process.env.PUBLIC_URL}/assets/howtosign.jpg`
+          props.imgUrl ? props.imgUrl : `${process.env.PUBLIC_URL}/assets/.jpg`
         }
         alt=""
       />

@@ -121,6 +121,17 @@ export default function FooterSection(props) {
           >
             معرفی سخنران
           </Button>
+          {/* <a href="https://www.aparat.com/event/4312"> */}
+          <Button
+            onClick={() => {
+              window.open("https://www.aparat.com/event/4312", "_blank");
+            }}
+            style={{ marginRight: 20 }}
+            variant="fill"
+          >
+            خرید بلیط
+          </Button>
+          {/* </a> */}
         </div>
       </div>
       <PopUpDialog

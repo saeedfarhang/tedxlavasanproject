@@ -104,16 +104,15 @@ export default function HowSignup() {
             کنید، به این معناست که در سایت آپارات لاگین نکرده اید. ابتدا لاگین
             کنید و سپس مجدد به صفحه رویداد تدکس لواسان مراجعه کنید.)
             <br /> منتظر دیدارتان هستیم. :)
-            <br />
-              در صورت هرگونه مشکل، از طریق واتس‌آپ با شماره تلفن 09029431668 در
-            تماس باشید.
+            <br />  در صورت هرگونه مشکل، از طریق واتس‌آپ با شماره تلفن
+            09029431668 در تماس باشید.
           </Typography>
         </div>
-        <Link to="/signup">
+        <a href="https://www.aparat.com/event/4312">
           <Button margin={"40px 0 60px 0"} variant="fill">
             ثبت نام کنید
           </Button>
-        </Link>
+        </a>
       </div>
       <FooterSection />
     </HowSignContainer>

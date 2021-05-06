@@ -129,6 +129,7 @@ const NavMenu = styled.div`
     button {
       padding: 25px 35vw;
     }
+    overflow-y: auto;
   }
 `;
 
@@ -199,19 +200,22 @@ export default function NavBar(props) {
               معرفی کارگاه
             </Button>
           </Link>
-          <Link style={{ margin: "auto 0 40px 0" }} to="/signup">
+          <a
+            style={{ margin: "auto 0 40px 0" }}
+            href="https://www.aparat.com/event/4312"
+          >
             <Button margin="20px" variant="fill">
               خرید بلیط
             </Button>
-          </Link>
+          </a>
         </NavMenu>
       </HambMenu>
       <NavLinks>
-        <Link to="/signup">
+        <a href="https://www.aparat.com/event/4312">
           <Button margin="0 0 0 10px" variant="fill">
             خرید بلیط
           </Button>
-        </Link>
+        </a>
         <Link to="/faq">
           <Button className="nav-btn" id="faq" variant="clear">
             سوالات متداول

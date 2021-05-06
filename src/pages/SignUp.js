@@ -76,17 +76,7 @@ export default function SignUp(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(() => {
-    var t = document.createElement("script");
-    t.type = "text/javascript";
-    t.async = !0;
-    t.src =
-      ("https:" === document.location.protocol ? "https://" : "http://") +
-      "widgets.evand.com/event-registration.js?load=1";
-    t.setAttribute("id", "evand-widget-event-registration");
-    var e = document.getElementsByTagName("script")[0];
-    e.parentNode.insertBefore(t, e);
-  }, []);
+
   console.log("hello world!");
   return (
     <Container>
