@@ -32,7 +32,7 @@ const Container = styled.div`
       width: 200px;
       height: 253px;
       margin-left: 30px;
-      background-color: #000;
+      background-color: #fff;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -58,6 +58,11 @@ const Container = styled.div`
     align-items: center;
     height: 31px;
     background-color: #e62b1e20;
+  }
+  .texts {
+    width: 100%;
+    padding: 0 10vw;
+    margin-bottom: 100px;
   }
 `;
 const SocialLinks = styled.div`
@@ -110,7 +115,19 @@ export default function SponserDetail(props) {
           </SocialLinks>
         </div>
       </div>
-      <div className="texts"></div>
+      <div className="texts">
+        {sponser.text &&
+          sponser.text.map((paragh) => (
+            <Typography
+              as="p"
+              textAlign="right"
+              fontSize="16px"
+              fontWeight="100"
+            >
+              {paragh}
+            </Typography>
+          ))}
+      </div>
     </Container>
   );
 }

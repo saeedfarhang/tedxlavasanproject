@@ -130,8 +130,8 @@ export default function SponsersSection(props) {
       </Typography>
       <div className="sponsor-grid">
         <SponsorCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/irancell.png`}
-          web={"https://irancell.ir/"}
+          imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/aparat.png`}
+          web={"https://aparat.com/"}
           selfPage
           key={4}
           id={4}
