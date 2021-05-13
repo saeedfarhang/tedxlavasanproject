@@ -140,15 +140,7 @@ export default function WorkShop() {
             Community)، قرار و آرامشی پایدار و برقرار را برایتان آرزومندیم.
           </Typography>
         </div>
-<<<<<<< HEAD
-        <a
-          target="_blank"
-          // ref="noreferrer"
-          href="https://evand.com/events/wronglove"
-        >
-=======
         <a target="_blank" href="https://evand.com/events/wronglove">
->>>>>>> 04e3095e011f579071f44df852d6b627906cd497
           <Button margin={"40px 0 60px 0"} variant="fill">
             ثبت نام کنید
           </Button>
