@@ -41,9 +41,7 @@
     "facebook": "",
     "twitter": "",
     "linkedin": "",
-    "instagram": "",
-    "selfPage": true,
-    "bigSize": true
+    "instagram": ""
   },
   {
     "id": 5,
@@ -86,5 +84,16 @@
       " آرمان خانواده‌ی بزرگ دیجی‌کالا، تغییر است، تغییراتی که منجر به فراهم کردن بستری برای رفاه، آرامش، امنیت و آسایش روزافزون مردم سرزمین‌مان شود.",
       " ما به همراهی دیجی‌کالا در تدکس لواسان مفتخریم."
     ]
+  },
+  {
+    "id": 8,
+    "imageUrl": "assets/sponser-logo/podium.svg",
+    "title": "پادیوم",
+    "telegram": "",
+    "web": "https://podium.ir/",
+    "facebook": "",
+    "twitter": "",
+    "linkedin": "",
+    "instagram": ""
   }
 ]
