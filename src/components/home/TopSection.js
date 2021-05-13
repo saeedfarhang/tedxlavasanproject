@@ -72,9 +72,9 @@ export default function TopSection(props) {
           </>
         )}
 
-        <Link to="/signup">
+        <a target="_blank" href="https://www.aparat.com/event/4312">
           <Button variant="fill">خرید بلیط</Button>
-        </Link>
+        </a>
         <div className="link-to-speakers-container" onClick={scrollHandle}>
           <Typography
             color="#B2B2B2"

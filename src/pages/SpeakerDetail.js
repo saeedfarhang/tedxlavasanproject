@@ -52,9 +52,12 @@ const Container = styled.div`
     width: 100%;
     padding: 0 10vw;
     margin-bottom: 100px;
+<<<<<<< HEAD
     @media screen and (max-width: 600px) {
       padding: 0 5vw;
     }
+=======
+>>>>>>> 04e3095e011f579071f44df852d6b627906cd497
   }
 `;
 const SocialLinks = styled.div`
@@ -103,6 +106,7 @@ export default function SpeakerDetail(props) {
         </div>
       </div>
       <div className="texts">
+<<<<<<< HEAD
         <Typography
           as="p"
           textAlign="right"
@@ -114,6 +118,19 @@ export default function SpeakerDetail(props) {
             <p>{line}</p>
           ))}
         </Typography>
+=======
+        {speaker.text &&
+          speaker.text.map((paragh) => (
+            <Typography
+              as="p"
+              textAlign="right"
+              fontSize="16px"
+              fontWeight="100"
+            >
+              {paragh}
+            </Typography>
+          ))}
+>>>>>>> 04e3095e011f579071f44df852d6b627906cd497
       </div>
     </Container>
   );

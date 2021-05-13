@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import styled from "styled-components";
 import FooterSection from "../components/home/FooterSection";
 import SponsersSection from "../components/home/SponsersSection";
 import NavBar from "../components/NavBar";
+import Button from "../elements/Button";
 import Typography from "../elements/Typography";
 
 const Container = styled.div`
@@ -74,17 +76,7 @@ export default function SignUp(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  useEffect(() => {
-    var t = document.createElement("script");
-    t.type = "text/javascript";
-    t.async = !0;
-    t.src =
-      ("https:" === document.location.protocol ? "https://" : "http://") +
-      "widgets.evand.com/event-registration.js?load=1";
-    t.setAttribute("id", "evand-widget-event-registration");
-    var e = document.getElementsByTagName("script")[0];
-    e.parentNode.insertBefore(t, e);
-  }, []);
+
   console.log("hello world!");
   return (
     <Container>
@@ -111,11 +103,9 @@ export default function SignUp(props) {
             ٣١ اردیبهشت ١٤٠٠
           </Typography>
         </div>
-        <div
-          class="evand-widget evand-widget-event-registration"
-          data-event-slug="tedxlavasan"
-          data-setting=""
-        ></div>
+        <a target="_blank" href="https://www.aparat.com/event/4312">
+          <Button variant="fill">خرید بلیط</Button>
+        </a>
       </div>
       <SponsersSection />
       <div className="space"></div>

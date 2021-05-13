@@ -32,9 +32,9 @@ export default function Routing(props) {
         <Route exact path="/sponsors">
           <Sponsers />
         </Route>
-        <Route exact path="/signup">
+        {/* <Route exact path="/signup">
           <SignUp />
-        </Route>
+        </Route> */}
         <Route exact path="/speakers/:id" component={SpeakerDetail}></Route>
         <Route exact path="/sponsors/:id" component={SponserDetail}></Route>
       </Switch>
