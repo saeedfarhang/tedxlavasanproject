@@ -83,15 +83,6 @@ export default function Sponsers() {
       </Typography>
       <div className="sponsor-grid">
         <SponsorCard
-          imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/aparat.png`}
-          web={"https://aparat.com/"}
-          selfPage
-          key={4}
-          id={4}
-          bigSize
-        />
-        <div className="space-sponsors-big" style={{ width: "3%" }}></div>
-        <SponsorCard
           imageUrl={`${process.env.PUBLIC_URL}/assets/sponser-logo/digikala.png`}
           web={"https://digikala.com/"}
           selfPage
