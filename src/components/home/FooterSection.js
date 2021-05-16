@@ -83,7 +83,7 @@ export default function FooterSection(props) {
             margin="0 0 40px 0"
           >
             لواسان، بلوار امام خمینی، خیابان اتحاد، خیابان گل‌های پنجم، پلاک ۵،
-            دفتر کارمان
+            کارمان لواسان
           </Typography>
           <div className="social-links">
             <SocialLink

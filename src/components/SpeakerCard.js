@@ -48,83 +48,83 @@ export default function SpeakerCard(props) {
       imageUrl={props.imageUrl}
       RedxMarginRight={props.RedxMarginRight}
     >
-      <Link to={`/speakers/${props.id}`}>
+      {/* <Link to={`/speakers/${props.id}`}> */}
+      <div
+        style={{
+          width: "100%",
+          height: "260px",
+          position: "relative",
+          overflow: "hidden",
+          willChange: "opacity",
+        }}
+      >
+        <LazyLoadImage
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            filter: "grayscale(1)",
+            position: "absolute",
+            zIndex: "-1",
+            border: "solid 1px #B2B2B220",
+          }}
+          src={props.imageUrl}
+          alt=""
+        />
+        {props.redxDir === "left" ? (
+          <LazyLoadImage
+            src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
+            alt=""
+            style={{
+              opacity: 0.8,
+              marginRight: props.RedxMarginRight,
+              mixBlendMode: "color",
+            }}
+          />
+        ) : (
+          <LazyLoadImage
+            src={`${process.env.PUBLIC_URL}/assets/right-redx.svg`}
+            alt=""
+            style={{
+              opacity: 0.8,
+              marginRight: props.RedxMarginRight,
+              mixBlendMode: "color",
+            }}
+          />
+        )}
         <div
           style={{
             width: "100%",
-            height: "260px",
-            position: "relative",
-            overflow: "hidden",
-            willChange: "opacity",
+            height: "50%",
+            position: "absolute",
+            bottom: 0,
+            background: "linear-gradient(180deg, transparent, #000)",
           }}
         >
-          <LazyLoadImage
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              filter: "grayscale(1)",
-              position: "absolute",
-              zIndex: "-1",
-              border: "solid 1px #B2B2B220",
-            }}
-            src={props.imageUrl}
-            alt=""
-          />
-          {props.redxDir === "left" ? (
-            <LazyLoadImage
-              src={`${process.env.PUBLIC_URL}/assets/left-redx.svg`}
-              alt=""
-              style={{
-                opacity: 0.8,
-                marginRight: props.RedxMarginRight,
-                mixBlendMode: "color",
-              }}
-            />
-          ) : (
-            <LazyLoadImage
-              src={`${process.env.PUBLIC_URL}/assets/right-redx.svg`}
-              alt=""
-              style={{
-                opacity: 0.8,
-                marginRight: props.RedxMarginRight,
-                mixBlendMode: "color",
-              }}
-            />
-          )}
-          <div
-            style={{
-              width: "100%",
-              height: "50%",
-              position: "absolute",
-              bottom: 0,
-              background: "linear-gradient(180deg, transparent, #000)",
-            }}
-          >
-            <SpeakerDetail>
-              <Typography
-                reduce="0px"
-                textAlign="left"
-                variant="h3"
-                fontSize="28px"
-                fontWeight="normal"
-              >
-                {props.title}
-              </Typography>
-              <Typography
-                reduce="0px"
-                color="#B2B2B2"
-                textAlign="left"
-                variant="p"
-                fontSize="13px"
-                fontWeight="300"
-              >
-                {props.desc}
-              </Typography>
-            </SpeakerDetail>
-          </div>
+          <SpeakerDetail>
+            <Typography
+              reduce="0px"
+              textAlign="left"
+              variant="h3"
+              fontSize="28px"
+              fontWeight="normal"
+            >
+              {props.title}
+            </Typography>
+            <Typography
+              reduce="0px"
+              color="#B2B2B2"
+              textAlign="left"
+              variant="p"
+              fontSize="13px"
+              fontWeight="300"
+            >
+              {props.desc}
+            </Typography>
+          </SpeakerDetail>
         </div>
-      </Link>
+      </div>
+      {/* </Link> */}
       <Actions>
         <SocialLinks>
           <SocialLink social="instagram" href={props.instagram} />
@@ -134,7 +134,9 @@ export default function SpeakerCard(props) {
           <SocialLink social="linkedin" href={props.linkedin} />
           <SocialLink social="web" href={props.web} />
         </SocialLinks>
-        <ArrowBtn noDisplay />
+        <Link to={`/speakers/${props.id}`}>
+          <ArrowBtn title="معرفی سخنران" />
+        </Link>
       </Actions>
     </CustomSpeakerCard>
   );
